@@ -26,7 +26,7 @@
         "build-css": "node-sass src/scss/style.scss dist/css/style.min.css --output-style compact",
         "build-storybook": "build-storybook -s public",
         "clean": "rimraf dist",
-        "compile": "npm run clean && npm run build-css && cross-env NODE_ENV=production babel src/lib --out-dir dist --ignore '**/*.stories.js'",
+        "compile": "npm run clean && npm run build-css && npm run copy-fonts && cross-env NODE_ENV=production babel src/lib --out-dir dist --ignore '**/*.stories.js'",
         "copy-fonts": "cp -r ./node_modules/ucf-athena-framework/src/fonts dist/fonts",
         "storybook": "start-storybook -p 6006 -s public"
     },
