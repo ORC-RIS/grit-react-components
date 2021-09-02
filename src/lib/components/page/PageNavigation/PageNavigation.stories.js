@@ -12,6 +12,13 @@ const Template = (args) => <PageNavigation {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-    config: {},
+    config: {
+        links: [
+            {
+                text: "Page Link",
+                href: "#"
+            }
+        ]
+    },
     setAppContext: () => {},
 };
