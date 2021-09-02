@@ -12,5 +12,7 @@ const Template = (args) => <MainNavigation {...args} />;
 export const Default = Template.bind({});
 
 Default.args = {
-    brandContent: "My GRIT Application",
+    config: {
+        brandContent: "My GRIT Application",
+    }
 };
