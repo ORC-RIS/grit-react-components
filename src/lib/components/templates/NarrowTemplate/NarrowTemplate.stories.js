@@ -16,6 +16,11 @@ const Template = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-    config: {},
+    children: <>Children of the Narrow template will go here.</>,
+    config: {
+        pageHeader: {
+            title: "A Narrow Template"
+        }
+    },
     setAppContext: () => {},
 };

@@ -17,6 +17,11 @@ const Template = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-    config: {},
+    children: <>Children of the Basic template will go here.</>,
+    config: {
+        pageHeader: {
+            title: "A Basic Template"
+        }
+    },
     setAppContext: () => {},
 };
