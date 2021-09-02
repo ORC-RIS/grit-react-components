@@ -1,6 +1,6 @@
 import React from "react";
-
 import MainNavigation from "./MainNavigation";
+import "./../../../../scss/style.scss";
 
 export default {
     title: "Application/MainNavigation",

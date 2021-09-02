@@ -1,6 +1,7 @@
 import React from "react";
 import { AppContextProvider } from "../../context/AppContext/AppContext";
 import PageHeader from "./PageHeader";
+import "./../../../../scss/style.scss";
 
 export default {
     title: "Page/PageHeader",
