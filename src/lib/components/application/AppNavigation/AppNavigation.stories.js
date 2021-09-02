@@ -1,13 +1,13 @@
 import React from "react";
-import MainNavigation from "./MainNavigation";
+import AppNavigation from "./AppNavigation";
 import "./../../../../scss/style.scss";
 
 export default {
-    title: "Application/MainNavigation",
-    component: MainNavigation,
+    title: "Application/AppNavigation",
+    component: AppNavigation,
 };
 
-const Template = (args) => <MainNavigation {...args} />;
+const Template = (args) => <AppNavigation {...args} />;
 
 export const Default = Template.bind({});
 

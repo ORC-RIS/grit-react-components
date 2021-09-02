@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 
-const MainNavigation = ({ config = {} }) => {
+const AppNavigation = ({ config = {} }) => {
     return (
-        <div className="MainNavigation">
+        <div className="AppNavigation">
             <div className="main-navigation-wrapper">
                 <Navbar
                     collapseOnSelect
@@ -72,4 +72,4 @@ const NavbarToggle = () => {
     );
 };
 
-export default MainNavigation;
+export default AppNavigation;

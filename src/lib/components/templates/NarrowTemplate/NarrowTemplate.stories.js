@@ -1,4 +1,5 @@
 import React from "react";
+import AppMain from "../../application/AppMain/AppMain";
 import { AppContextProvider } from "../../context/AppContext/AppContext";
 import NarrowTemplate from "./NarrowTemplate";
 
@@ -9,7 +10,9 @@ export default {
 
 const Template = (args) => (
     <AppContextProvider>
-        <NarrowTemplate {...args} />
+        <AppMain>
+            <NarrowTemplate {...args} />
+        </AppMain>
     </AppContextProvider>
 );
 
@@ -19,8 +22,8 @@ Default.args = {
     children: <>Children of the Narrow template will go here.</>,
     config: {
         pageHeader: {
-            title: "A Narrow Template"
-        }
+            title: "A Narrow Template",
+        },
     },
     setAppContext: () => {},
 };
