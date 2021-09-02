@@ -27,13 +27,15 @@ var MainNavigation = function MainNavigation(_ref) {
   }), config.links && /*#__PURE__*/_react.default.createElement(NavbarToggle, null), config.links && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
     id: "navbarScroll"
   }, /*#__PURE__*/_react.default.createElement(MainNav, {
-    links: config.links
+    links: config.links,
+    linksAs: config.linksAs
   }))))));
 };
 
 var MainNav = function MainNav(_ref2) {
   var _ref2$links = _ref2.links,
-      links = _ref2$links === void 0 ? [] : _ref2$links;
+      links = _ref2$links === void 0 ? [] : _ref2$links,
+      linksAs = _ref2.linksAs;
   return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, {
     className: "main-nav",
     as: "ul",
@@ -43,10 +45,11 @@ var MainNav = function MainNav(_ref2) {
       as: "li",
       key: idx
     }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
-      as: link.as,
+      as: linksAs,
       activeClassName: "",
       className: link.className ? link.className : false,
       to: link.href,
+      href: link.href,
       target: link.target
     }, link.text));
   }));
@@ -57,7 +60,8 @@ var NavbarBrand = function NavbarBrand(_ref3) {
       content = _ref3.content;
   return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Brand, {
     as: as,
-    to: "/"
+    to: "/",
+    href: "/"
   }, content);
 };
 

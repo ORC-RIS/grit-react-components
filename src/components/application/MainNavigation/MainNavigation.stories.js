@@ -3,7 +3,7 @@ import React from "react";
 import MainNavigation from "./MainNavigation";
 
 export default {
-    title: "MainNavigation",
+    title: "Application/MainNavigation",
     component: MainNavigation,
 };
 

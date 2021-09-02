@@ -12,11 +12,14 @@ const MainNavigation = ({ config = {} }) => {
                     }`}
                 >
                     <Container>
-                        <NavbarBrand as={config.brandAs} content={config.brandContent} />
+                        <NavbarBrand
+                            as={config.brandAs}
+                            content={config.brandContent}
+                        />
                         {config.links && <NavbarToggle />}
                         {config.links && (
                             <Navbar.Collapse id="navbarScroll">
-                                <MainNav links={config.links} />
+                                <MainNav links={config.links} linksAs={config.linksAs} />
                             </Navbar.Collapse>
                         )}
                     </Container>
@@ -26,7 +29,7 @@ const MainNavigation = ({ config = {} }) => {
     );
 };
 
-const MainNav = ({ links = [] }) => {
+const MainNav = ({ links = [], linksAs }) => {
     return (
         <Nav className="main-nav" as="ul" activeKey="">
             {links &&
@@ -34,12 +37,13 @@ const MainNav = ({ links = [] }) => {
                     return (
                         <Nav.Item as="li" key={idx}>
                             <Nav.Link
-                                as={link.as}
+                                as={linksAs}
                                 activeClassName=""
                                 className={
                                     link.className ? link.className : false
                                 }
                                 to={link.href}
+                                href={link.href}
                                 target={link.target}
                             >
                                 {link.text}
@@ -53,7 +57,7 @@ const MainNav = ({ links = [] }) => {
 
 const NavbarBrand = ({ as, content }) => {
     return (
-        <Navbar.Brand as={as} to="/">
+        <Navbar.Brand as={as} to="/" href="/">
             {content}
         </Navbar.Brand>
     );
