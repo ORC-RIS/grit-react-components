@@ -1,0 +1,94 @@
+.page-header {
+    @extend .d-flex, .flex-column, .bg-inverse-t-1;
+    overflow: hidden;
+    position: relative;
+
+    .page-header-content {
+        @extend .py-4, .py-lg-5;
+    }
+
+    &.navigation-overlap-content {
+        .page-header-content {
+            padding-top: 6 * $spacer !important;
+        }
+    }
+
+    .page-header-media {
+        overflow: hidden;
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        .page-header-image {
+            position: absolute;
+            z-index: 0;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 100%;
+            width: auto;
+            filter: brightness(85%) blur(2px);
+
+            @media (min-width: map-get($map: $grid-breakpoints, $key: "md")) {
+                & {
+                    width: 110%;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    .page-header-title {
+        @extend .mb-0, .text-inverse;
+    }
+
+    .page-header-subtitle {
+        @extend .mb-0, .text-muted;
+    }
+
+    .page-header-media + .page-header-content {
+        min-height: 100vw;
+        @extend .d-flex, .flex-column, .justify-content-center;
+
+        @media (min-width: map-get($map: $grid-breakpoints, $key: "sm")) {
+            & {
+                min-height: 500px;
+            }
+        }
+
+        .page-header-title {
+            .title {
+                @extend .text-inverse,
+                    .display-4,
+                    .font-condensed,
+                    .text-shadow-hard,
+                    .text-uppercase;
+            }
+
+            .title-prefix {
+                @extend .d-block,
+                    .h6,
+                    .text-primary,
+                    .font-weight-bold,
+                    .text-uppercase,
+                    .mb-2,
+                    .mb-lg-3;
+            }
+        }
+
+        .page-header-subtitle {
+            @extend .d-inline-block,
+                .w-auto,
+                .h5,
+                .bg-inverse-t-3,
+                .px-2,
+                .py-1,
+                .text-uppercase,
+                .text-inverse,
+                .font-weight-bold;
+        }
+    }
+}

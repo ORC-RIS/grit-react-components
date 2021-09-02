@@ -1,0 +1,74 @@
+
+.main-navigation-wrapper {
+    @extend .bg-inverse-75;
+}
+
+.main-navigation {
+    transition: all 0.3s ease-in-out;
+
+    @extend .navbar-inverse, .px-sm-3, .bg-inverse-75, .navbar-toggleable-lg;
+
+    .navbar-nav > .nav-item > a,
+    .navbar-brand {
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+        white-space: normal;
+        color: white;
+    }
+
+    .nav-link {
+        @extend .px-3, .text-center, .d-block;
+    }
+
+    .nav-link:hover {
+        background-color: rgba(0, 0, 0, 0.9);
+    }
+    
+    .nav-item.active .nav-link {
+        background-color: rgba(255, 255, 255, 0.3);
+    }
+    
+    
+
+    .navbar-collapse {
+        &.collapsing,
+        &.show {
+            position: absolute;
+            z-index: 99;
+            left: -0.5 * $grid-gutter-width-base;
+            right: -0.5 * $grid-gutter-width-base;
+            top: 100%;
+
+            @extend .bg-inverse-75;
+        }
+
+        .main-nav {
+            @extend .nav, .ml-lg-auto, .mr-lg-0, .mx-0, .p-3, .p-lg-0;
+        }
+    }
+
+    &.overlap-content {
+        background-color: transparent !important;
+        background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.5) 0,
+            transparent 100%
+        );
+        background-repeat: repeat-x;
+        position: absolute;
+        z-index: 9;
+        left: 0;
+        right: 0;
+
+        @extend .py-2, .py-lg-3;
+
+        .navbar-collapse {
+            @extend .border-0;
+
+            @media (min-width: map-get($map: $grid-breakpoints, $key: "lg")) {
+                & {
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}

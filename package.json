@@ -1,0 +1,76 @@
+{
+    "name": "grit-react-components",
+    "version": "0.1.0",
+    "main": "dist/index.js",
+    "private": false,
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "dependencies": {
+        "@testing-library/jest-dom": "^5.14.1",
+        "@testing-library/react": "^11.2.7",
+        "@testing-library/user-event": "^12.8.3",
+        "node-sass": "^6.0.1",
+        "react-bootstrap": "^1.6.1",
+        "react-scrollspy-navigation": "^1.0.2",
+        "ucf-athena-framework": "^1.1.0",
+        "web-vitals": "^1.1.2"
+    },
+    "peerDependencies": {
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "4.0.3"
+    },
+    "scripts": {
+        "build-css": "node-sass src/scss/style.scss dist/css/style.min.css --output-style compact",
+        "build-storybook": "build-storybook -s public",
+        "clean": "rimraf dist",
+        "compile": "npm run clean && npm run build-css && npm run copy-fonts && cross-env NODE_ENV=production babel src/lib --out-dir dist --ignore '**/*.stories.js'",
+        "copy-fonts": "cp -r ./node_modules/ucf-athena-framework/src/fonts dist/fonts",
+        "storybook": "start-storybook -p 6006 -s public"
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ],
+        "overrides": [
+            {
+                "files": [
+                    "**/*.stories.*"
+                ],
+                "rules": {
+                    "import/no-anonymous-default-export": "off"
+                }
+            }
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.14.8",
+        "@babel/preset-env": "^7.15.0",
+        "@babel/preset-react": "^7.14.5",
+        "@storybook/addon-actions": "^6.3.7",
+        "@storybook/addon-essentials": "^6.3.7",
+        "@storybook/addon-links": "^6.3.7",
+        "@storybook/node-logger": "^6.3.7",
+        "@storybook/preset-create-react-app": "^3.2.0",
+        "@storybook/react": "^6.3.7",
+        "cross-env": "^7.0.3",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-scripts": "4.0.3"
+    }
+}
