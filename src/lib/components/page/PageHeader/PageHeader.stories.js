@@ -1,5 +1,5 @@
 import React from "react";
-
+import { AppContextProvider } from "../../context/AppContext/AppContext";
 import PageHeader from "./PageHeader";
 
 export default {
@@ -7,7 +7,11 @@ export default {
     component: PageHeader,
 };
 
-const Template = (args) => <PageHeader {...args} />;
+const Template = (args) => (
+    <AppContextProvider>
+        <PageHeader {...args} />
+    </AppContextProvider>
+);
 
 export const Default = Template.bind({});
 
