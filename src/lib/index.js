@@ -1,4 +1,4 @@
-import MainNavigation from "./components/application/MainNavigation/MainNavigation";
+import AppNavigation from "./components/application/AppNavigation/AppNavigation";
 import {
     AppContext,
     AppContextProvider,
@@ -14,7 +14,7 @@ import UcfHeader from "./components/ucf/UcfHeader/UcfHeader";
 export {
     AppContext,
     AppContextProvider,
-    MainNavigation,
+    AppNavigation as MainNavigation,
     NarrowTemplate,
     PageContent,
     PageFooter,

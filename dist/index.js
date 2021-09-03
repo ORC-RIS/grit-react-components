@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 Object.defineProperty(exports, "MainNavigation", {
   enumerable: true,
   get: function get() {
-    return _MainNavigation.default;
+    return _AppNavigation.default;
   }
 });
 Object.defineProperty(exports, "AppContext", {
@@ -64,7 +64,7 @@ Object.defineProperty(exports, "UcfHeader", {
   }
 });
 
-var _MainNavigation = _interopRequireDefault(require("./components/application/MainNavigation/MainNavigation"));
+var _AppNavigation = _interopRequireDefault(require("./components/application/AppNavigation/AppNavigation"));
 
 var _AppContext = require("./components/context/AppContext/AppContext");
 
