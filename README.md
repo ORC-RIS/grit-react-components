@@ -4,7 +4,7 @@ This package contains React components and styles that will be common to applica
 
 ## Installation
 
-Install this package using npm: `npm install grit-react-components`.
+Install this package using npm: `npm install --save ORC-RIS/grit-react-components`.
 
 ## Development
 
