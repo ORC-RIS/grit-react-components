@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { AppContext } from "../../context/AppContext/AppContext";
 
 const AppMain = ({ children, config = {} }) => {
+    console.log(AppContext);
     const { updateAppContext, defaultAppContext } = useContext(AppContext);
 
     const [appContext, setAppContext] = useState(defaultAppContext);
