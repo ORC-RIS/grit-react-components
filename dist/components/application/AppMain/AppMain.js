@@ -5,13 +5,23 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = exports.AppContextProvider = exports.AppContext = void 0;
+exports.default = void 0;
 
 var _react = _interopRequireWildcard(require("react"));
+
+var _reactBootstrap = require("react-bootstrap");
+
+var _AppContext = require("../../context/AppContext/AppContext");
 
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
 
 function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+
+function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
@@ -25,48 +35,54 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
+var AppMain = function AppMain(_ref) {
+  var children = _ref.children,
+      _ref$config = _ref.config,
+      config = _ref$config === void 0 ? {} : _ref$config;
 
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
+  var _useContext = (0, _react.useContext)(_AppContext.AppContext),
+      updateAppContext = _useContext.updateAppContext,
+      defaultAppContext = _useContext.defaultAppContext;
 
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+  var _useState = (0, _react.useState)(defaultAppContext),
+      _useState2 = _slicedToArray(_useState, 2),
+      appContext = _useState2[0],
+      setAppContext = _useState2[1];
 
-var AppContext = /*#__PURE__*/(0, _react.createContext)();
-exports.AppContext = AppContext;
-var initialState = {
-  isLoading: false
+  (0, _react.useEffect)(function () {
+    updateAppContext({
+      type: "RESET",
+      payload: {}
+    });
+  }, [updateAppContext]);
+  (0, _react.useEffect)(function () {
+    updateAppContext({
+      type: "UPDATE",
+      payload: _objectSpread({}, appContext)
+    });
+  }, [appContext, updateAppContext]);
+  return /*#__PURE__*/_react.default.createElement("main", {
+    className: "AppMain"
+  }, appContext.isLoading && /*#__PURE__*/_react.default.createElement(Loading, null), !appContext.isLoading && _react.default.Children.map(children, function (child) {
+    return /*#__PURE__*/_react.default.cloneElement(child, {
+      setAppContext: setAppContext
+    });
+  }));
 };
 
-var reducer = function reducer(state, action) {
-  switch (action.type) {
-    case "UPDATE":
-      return _objectSpread(_objectSpread({}, state), action.payload);
-
-    case "RESET":
-      return _objectSpread({}, initialState);
-
-    default:
-      return state;
-  }
+var Loading = function Loading() {
+  return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, {
+    className: "h-100"
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
+    className: "text-center align-content-center h-100 row-sy-2 row-sy-lg-3"
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
+    xs: 12
+  }), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
+    xs: 12
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "mb-0 letter-spacing-3 text-uppercase font-weight-bold"
+  }, "Loading"))));
 };
 
-var AppContextProvider = function AppContextProvider(props) {
-  var defaultAppContext = initialState;
-
-  var _useReducer = (0, _react.useReducer)(reducer, initialState),
-      _useReducer2 = _slicedToArray(_useReducer, 2),
-      appContext = _useReducer2[0],
-      updateAppContext = _useReducer2[1];
-
-  return /*#__PURE__*/_react.default.createElement(AppContext.Provider, {
-    value: {
-      appContext: appContext,
-      updateAppContext: updateAppContext,
-      defaultAppContext: defaultAppContext
-    }
-  }, props.children);
-};
-
-exports.AppContextProvider = AppContextProvider;
-var _default = AppContext;
+var _default = AppMain;
 exports.default = _default;

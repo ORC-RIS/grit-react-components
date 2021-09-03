@@ -19,6 +19,12 @@ var UcfHeader = function UcfHeader() {
     scriptTag.id = "ucfhb-script";
     scriptTag.src = "//universityheader.ucf.edu/bar/js/university-header.js?use-1200-breakpoint=1";
     document.body.appendChild(scriptTag);
+    return function () {
+      document.querySelectorAll("[id^=" + scriptTag.id + "]").forEach(function (el) {
+        return el.remove();
+      });
+      document.getElementById("ucfhb").remove();
+    };
   }, []);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null);
 };

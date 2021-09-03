@@ -11,11 +11,11 @@ var _reactBootstrap = require("react-bootstrap");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var MainNavigation = function MainNavigation(_ref) {
+var AppNavigation = function AppNavigation(_ref) {
   var _ref$config = _ref.config,
       config = _ref$config === void 0 ? {} : _ref$config;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "MainNavigation"
+    className: "AppNavigation"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "main-navigation-wrapper"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar, {
@@ -46,7 +46,6 @@ var MainNav = function MainNav(_ref2) {
       key: idx
     }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, {
       as: linksAs,
-      activeClassName: "",
       className: link.className ? link.className : false,
       to: link.href,
       href: link.href,
@@ -73,5 +72,5 @@ var NavbarToggle = function NavbarToggle() {
   }));
 };
 
-var _default = MainNavigation;
+var _default = AppNavigation;
 exports.default = _default;

@@ -38,7 +38,6 @@ const MainNav = ({ links = [], linksAs }) => {
                         <Nav.Item as="li" key={idx}>
                             <Nav.Link
                                 as={linksAs}
-                                activeClassName=""
                                 className={
                                     link.className ? link.className : false
                                 }
