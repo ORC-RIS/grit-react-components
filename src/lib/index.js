@@ -14,7 +14,7 @@ import UcfHeader from "./components/ucf/UcfHeader/UcfHeader";
 export {
     AppContext,
     AppContextProvider,
-    AppNavigation as MainNavigation,
+    AppNavigation,
     NarrowTemplate,
     PageContent,
     PageFooter,

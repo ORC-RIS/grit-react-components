@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-Object.defineProperty(exports, "MainNavigation", {
+Object.defineProperty(exports, "AppNavigation", {
   enumerable: true,
   get: function get() {
     return _AppNavigation.default;
