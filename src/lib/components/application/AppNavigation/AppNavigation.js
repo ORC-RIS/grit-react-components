@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import AppContext from "../../context/AppContext/AppContext";
 
 const AppNavigation = ({ config = {} }) => {
+    const { appContext } = useContext(AppContext);
+
+    config.overlapContent = appContext.appNavigationOverlapContent;
+
     return (
         <div className="AppNavigation">
             <div className="main-navigation-wrapper">
@@ -19,7 +24,10 @@ const AppNavigation = ({ config = {} }) => {
                         {config.links && <NavbarToggle />}
                         {config.links && (
                             <Navbar.Collapse id="navbarScroll">
-                                <MainNav links={config.links} linksAs={config.linksAs} />
+                                <MainNav
+                                    links={config.links}
+                                    linksAs={config.linksAs}
+                                />
                             </Navbar.Collapse>
                         )}
                     </Container>
