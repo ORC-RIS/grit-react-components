@@ -1,6 +1,6 @@
 // IMPORT ATHENA VARIABLES
 // ============================================================================
-@import "@import '../../node_modules/ucf-athena-framework/src/scss/_variables.scss";
+@import "~ucf-athena-framework/src/scss/_variables.scss";
 
 // VARIABLE OVERRIDES
 // ============================================================================
@@ -8,7 +8,7 @@ $athena-font-path: "../../fonts/";
 
 // IMPORT ATHENA
 // ============================================================================
-@import "@import '../../node_modules/ucf-athena-framework/src/scss/framework.scss";
+@import "~ucf-athena-framework/src/scss/framework.scss";
 
 // IMPORT THEME STYLES
 // ============================================================================

@@ -32,7 +32,7 @@ var PageHeader = function PageHeader(_ref) {
   return !config.hide && /*#__PURE__*/_react.default.createElement("div", {
     className: "PageHeader"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "page-header ".concat(appContext.siteNavigationOverlapContent && "navigation-overlap-content")
+    className: "page-header ".concat(appContext.siteNavigationOverlapContent && "navigation-overlap-content", "\n                        ").concat(config.inline && "inline", "\n                        ")
   }, config.backgroundImage && /*#__PURE__*/_react.default.createElement(PageHeaderMedia, {
     backgroundImage: config.backgroundImage
   }), /*#__PURE__*/_react.default.createElement(PageHeaderContent, {

@@ -14,6 +14,7 @@
         "@testing-library/react": "^11.2.7",
         "@testing-library/user-event": "^12.8.3",
         "node-sass": "^6.0.1",
+        "node-sass-tilde-importer": "^1.0.2",
         "react-bootstrap": "^1.6.1",
         "react-scrollspy-navigation": "^1.0.2",
         "ucf-athena-framework": "^1.1.0",
@@ -25,7 +26,7 @@
         "react-scripts": "4.0.3"
     },
     "scripts": {
-        "build-css": "node-sass src/scss/style.scss src/css/style.min.css --output-style compact && cp -r src/css dist/css",
+        "build-css": "node-sass --importer ./node_modules/node-sass-tilde-importer/index.js src/scss/style.scss  src/css/style.min.css --output-style compact && cp -r src/css dist/css",
         "build-storybook": "build-storybook -s public",
         "clean": "rimraf dist",
         "compile": "npm run clean && cross-env NODE_ENV=production babel src/lib --out-dir dist --ignore '**/*.stories.js' && npm run build-css && npm run copy-fonts",

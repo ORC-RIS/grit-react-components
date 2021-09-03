@@ -27,7 +27,6 @@ var AppFooter = function AppFooter(_ref) {
 var Colophon = function Colophon(_ref2) {
   var _ref2$config = _ref2.config,
       config = _ref2$config === void 0 ? {} : _ref2$config;
-  console.log(config);
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "bg-inverse py-4 py-lg-5"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, {
