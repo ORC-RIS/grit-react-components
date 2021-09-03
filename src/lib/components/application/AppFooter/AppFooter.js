@@ -12,7 +12,6 @@ const AppFooter = ({ children, config = {} }) => {
 };
 
 const Colophon = ({ config = {} }) => {
-    console.log(config);
     return (
         <div className="bg-inverse py-4 py-lg-5">
             <Container className="py-2">

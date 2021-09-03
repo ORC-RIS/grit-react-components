@@ -17,6 +17,11 @@ const Template = (args) => (
 export const Default = Template.bind({});
 
 Default.args = {
-    config: {},
+    config: {
+        title: "Page Header",
+        // titlePrefix: "Prefix",
+        subtitle:
+            "Aliquam nec vehicula velit. Phasellus vitae purus pretium, tempus massa nec, commodo nibh. Aliquam congue et purus id accumsan. Pellentesque semper sed neque non lobortis. Donec sed turpis at nulla tristique sodales. ",
+    },
     setAppContext: () => {},
 };
