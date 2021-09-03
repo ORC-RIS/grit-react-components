@@ -4,6 +4,7 @@ import {
 } from "./components/context/AppContext/AppContext";
 import AppFooter from "./components/application/AppFooter/AppFooter";
 import AppHeader from "./components/application/AppHeader/AppHeader";
+import AppMain from "./components/application/AppMain/AppMain";
 import AppNavigation from "./components/application/AppNavigation/AppNavigation";
 import BasicTemplate from "./components/templates/BasicTemplate/BasicTemplate";
 import NarrowTemplate from "./components/templates/NarrowTemplate/NarrowTemplate";
@@ -19,6 +20,7 @@ export {
     AppContextProvider,
     AppFooter,
     AppHeader,
+    AppMain,
     AppNavigation,
     BasicTemplate,
     NarrowTemplate,

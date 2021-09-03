@@ -27,6 +27,12 @@ Object.defineProperty(exports, "AppHeader", {
     return _AppHeader.default;
   }
 });
+Object.defineProperty(exports, "AppMain", {
+  enumerable: true,
+  get: function get() {
+    return _AppMain.default;
+  }
+});
 Object.defineProperty(exports, "AppNavigation", {
   enumerable: true,
   get: function get() {
@@ -87,6 +93,8 @@ var _AppContext = require("./components/context/AppContext/AppContext");
 var _AppFooter = _interopRequireDefault(require("./components/application/AppFooter/AppFooter"));
 
 var _AppHeader = _interopRequireDefault(require("./components/application/AppHeader/AppHeader"));
+
+var _AppMain = _interopRequireDefault(require("./components/application/AppMain/AppMain"));
 
 var _AppNavigation = _interopRequireDefault(require("./components/application/AppNavigation/AppNavigation"));
 
