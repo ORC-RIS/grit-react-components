@@ -39,3 +39,13 @@ Default.args = {
         ],
     },
 };
+
+
+export const OverlapContent = Template.bind({});
+
+OverlapContent.args = {
+    config: {
+        ...Default.args.config,
+        overlapContent: true
+    }
+}

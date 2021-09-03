@@ -13,7 +13,9 @@ const PageHeader = ({ children, config = {} }) => {
                     className={`page-header ${
                         appContext.siteNavigationOverlapContent &&
                         "navigation-overlap-content"
-                    }`}
+                    }
+                        ${config.inline && "inline"}
+                        `}
                 >
                     {config.backgroundImage && (
                         <PageHeaderMedia
