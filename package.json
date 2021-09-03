@@ -5,7 +5,8 @@
     "private": false,
     "files": [
         "dist",
-        "README.md"
+        "README.md",
+        "src"
     ],
     "dependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.36",
