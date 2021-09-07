@@ -106,7 +106,7 @@ const PageHeaderContent = ({
 const PageHeaderTitle = ({ title, titlePrefix }) => {
     return (
         <h1 className="page-header-title">
-            <span className="title-prefix">{titlePrefix}</span>
+            {titlePrefix && <span className="title-prefix">{titlePrefix}</span>}
             <span className="title">{title}</span>
         </h1>
     );
