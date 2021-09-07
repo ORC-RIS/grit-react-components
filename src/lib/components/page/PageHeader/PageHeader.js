@@ -29,6 +29,7 @@ const PageHeader = ({ children, config = {} }) => {
                         title={config.title}
                         titlePrefix={config.titlePrefix}
                         widgets={config.widgets}
+                        centered={config.centered}
                     />
                     {children}
                 </div>
@@ -52,6 +53,7 @@ const PageHeaderMedia = ({ backgroundImage }) => {
 const PageHeaderContent = ({
     appContext,
     buttons,
+    centered,
     subtitle,
     title,
     titlePrefix,
@@ -74,6 +76,7 @@ const PageHeaderContent = ({
                                                 {title && (
                                                     <Col xs={12}>
                                                         <PageHeaderTitle
+                                                            centered={centered}
                                                             title={title}
                                                             titlePrefix={
                                                                 titlePrefix
@@ -84,6 +87,7 @@ const PageHeaderContent = ({
                                                 {subtitle && (
                                                     <Col xs={12}>
                                                         <PageHeaderSubtitle
+                                                            centered={centered}
                                                             subtitle={subtitle}
                                                         />
                                                     </Col>
@@ -103,17 +107,17 @@ const PageHeaderContent = ({
     );
 };
 
-const PageHeaderTitle = ({ title, titlePrefix }) => {
+const PageHeaderTitle = ({ centered, title, titlePrefix }) => {
     return (
-        <h1 className="page-header-title">
+        <h1 className={`page-header-title ${centered && "text-center"}`}>
             {titlePrefix && <span className="title-prefix">{titlePrefix}</span>}
             <span className="title">{title}</span>
         </h1>
     );
 };
 
-const PageHeaderSubtitle = ({ subtitle }) => {
-    return <div className="page-header-subtitle">{subtitle}</div>;
+const PageHeaderSubtitle = ({ centered, subtitle }) => {
+    return <div className={`page-header-subtitle ${centered && "text-center"}`}>{subtitle}</div>;
 };
 
 const PageHeaderButtons = ({ buttons }) => {
