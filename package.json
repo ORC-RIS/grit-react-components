@@ -5,13 +5,17 @@
     "private": false,
     "files": [
         "dist",
-        "README.md"
+        "README.md",
+        "fonts",
+        "src/scss"
     ],
     "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.36",
         "@testing-library/jest-dom": "^5.14.1",
         "@testing-library/react": "^11.2.7",
         "@testing-library/user-event": "^12.8.3",
         "node-sass": "^6.0.1",
+        "node-sass-tilde-importer": "^1.0.2",
         "react-bootstrap": "^1.6.1",
         "react-scrollspy-navigation": "^1.0.2",
         "ucf-athena-framework": "^1.1.0",
@@ -23,11 +27,11 @@
         "react-scripts": "4.0.3"
     },
     "scripts": {
-        "build-css": "node-sass src/scss/style.scss dist/css/style.min.css --output-style compact",
+        "build-css": "node-sass --importer ./node_modules/node-sass-tilde-importer/index.js src/scss/style.scss  src/css/style.min.css --output-style compact && cp -r src/css dist/css",
         "build-storybook": "build-storybook -s public",
         "clean": "rimraf dist",
-        "compile": "npm run clean && npm run build-css && npm run copy-fonts && cross-env NODE_ENV=production babel src/lib --out-dir dist --ignore '**/*.stories.js'",
-        "copy-fonts": "cp -r ./node_modules/ucf-athena-framework/src/fonts dist/fonts",
+        "compile": "npm run clean && cross-env NODE_ENV=production babel src/lib --out-dir dist --ignore '**/*.stories.js' && npm run build-css && npm run copy-fonts",
+        "copy-fonts": "cp -r ./node_modules/ucf-athena-framework/src/fonts src && cp -r src/fonts ./",
         "storybook": "start-storybook -p 6006 -s public"
     },
     "eslintConfig": {

@@ -1,8 +1,8 @@
 import React, { createContext, useReducer } from "react";
 
-export const AppContext = createContext();
+const AppContext = createContext();
 
-const initialState = {isLoading: false};
+const initialState = { isLoading: false };
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -15,7 +15,7 @@ const reducer = (state, action) => {
     }
 };
 
-export function AppContextProvider(props) {
+const AppContextProvider = (props) => {
     const defaultAppContext = initialState;
 
     const [appContext, updateAppContext] = useReducer(reducer, initialState);
@@ -27,4 +27,8 @@ export function AppContextProvider(props) {
             {props.children}
         </AppContext.Provider>
     );
-}
+};
+
+export { AppContext, AppContextProvider };
+
+export default AppContext;

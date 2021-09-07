@@ -13,6 +13,19 @@
         }
     }
 
+    &.inline {
+        background-color: none !important;
+        background: none !important;
+
+        .page-header-content {
+            padding-bottom: 0 !important;
+
+            .page-header-title {
+                @extend .text-secondary;
+            }
+        }
+    }
+
     .page-header-media {
         overflow: hidden;
         position: absolute;
@@ -43,6 +56,16 @@
 
     .page-header-title {
         @extend .mb-0, .text-inverse;
+
+        .title-prefix {
+            @extend .d-block,
+                .h6,
+                .text-primary,
+                .font-weight-bold,
+                .text-uppercase,
+                .mb-2,
+                .mb-lg-3;
+        }
     }
 
     .page-header-subtitle {
@@ -66,16 +89,6 @@
                     .font-condensed,
                     .text-shadow-hard,
                     .text-uppercase;
-            }
-
-            .title-prefix {
-                @extend .d-block,
-                    .h6,
-                    .text-primary,
-                    .font-weight-bold,
-                    .text-uppercase,
-                    .mb-2,
-                    .mb-lg-3;
             }
         }
 

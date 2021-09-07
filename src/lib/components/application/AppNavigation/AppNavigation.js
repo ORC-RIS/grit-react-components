@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import AppContext from "../../context/AppContext/AppContext";
 
-const MainNavigation = ({ config = {} }) => {
+const AppNavigation = ({ config = {} }) => {
+    const { appContext } = useContext(AppContext);
+
+    config.overlapContent = appContext.appNavigationOverlapContent;
+
     return (
-        <div className="MainNavigation">
+        <div className="AppNavigation">
             <div className="main-navigation-wrapper">
                 <Navbar
                     collapseOnSelect
@@ -19,7 +24,10 @@ const MainNavigation = ({ config = {} }) => {
                         {config.links && <NavbarToggle />}
                         {config.links && (
                             <Navbar.Collapse id="navbarScroll">
-                                <MainNav links={config.links} linksAs={config.linksAs} />
+                                <MainNav
+                                    links={config.links}
+                                    linksAs={config.linksAs}
+                                />
                             </Navbar.Collapse>
                         )}
                     </Container>
@@ -38,7 +46,6 @@ const MainNav = ({ links = [], linksAs }) => {
                         <Nav.Item as="li" key={idx}>
                             <Nav.Link
                                 as={linksAs}
-                                activeClassName=""
                                 className={
                                     link.className ? link.className : false
                                 }
@@ -72,4 +79,4 @@ const NavbarToggle = () => {
     );
 };
 
-export default MainNavigation;
+export default AppNavigation;

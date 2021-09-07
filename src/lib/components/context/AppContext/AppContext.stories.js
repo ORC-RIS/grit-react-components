@@ -1,9 +1,8 @@
 import React from "react";
-
 import AppContextProvider from "./AppContext";
 
 export default {
-    title: "Application/AppContextProvider",
+    title: "Context/AppContextProvider",
     component: AppContextProvider,
 };
 

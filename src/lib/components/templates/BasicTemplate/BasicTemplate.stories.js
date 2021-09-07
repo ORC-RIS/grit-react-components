@@ -1,4 +1,6 @@
 import React from "react";
+import AppMain from "../../application/AppMain/AppMain";
+import { AppContextProvider } from "../../context/AppContext/AppContext";
 
 import BasicTemplate from "./BasicTemplate";
 
@@ -7,11 +9,22 @@ export default {
     component: BasicTemplate,
 };
 
-const Template = (args) => <BasicTemplate {...args} />;
+const Template = (args) => (
+    <AppContextProvider>
+        <AppMain>
+            <BasicTemplate {...args} />
+        </AppMain>
+    </AppContextProvider>
+);
 
 export const Default = Template.bind({});
 
 Default.args = {
-    config: {},
+    children: <>Children of the Basic template will go here.</>,
+    config: {
+        pageHeader: {
+            title: "A Basic Template",
+        },
+    },
     setAppContext: () => {},
 };
