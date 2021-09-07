@@ -1,5 +1,4 @@
 import React from "react";
-import { AppContextProvider } from "../../context/AppContext/AppContext";
 import PageHeader from "./PageHeader";
 import "./../../../../scss/style.scss";
 
@@ -8,11 +7,7 @@ export default {
     component: PageHeader,
 };
 
-const Template = (args) => (
-    <AppContextProvider>
-        <PageHeader {...args} />
-    </AppContextProvider>
-);
+const Template = (args) => <PageHeader {...args} />;
 
 export const Default = Template.bind({});
 

@@ -1,6 +1,5 @@
 import React from "react";
 import AppMain from "../../application/AppMain/AppMain";
-import { AppContextProvider } from "../../context/AppContext/AppContext";
 import NarrowTemplate from "./NarrowTemplate";
 
 export default {
@@ -9,11 +8,9 @@ export default {
 };
 
 const Template = (args) => (
-    <AppContextProvider>
-        <AppMain>
-            <NarrowTemplate {...args} />
-        </AppMain>
-    </AppContextProvider>
+    <AppMain>
+        <NarrowTemplate {...args} />
+    </AppMain>
 );
 
 export const Default = Template.bind({});

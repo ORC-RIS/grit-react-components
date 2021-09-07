@@ -1,6 +1,5 @@
 import React from "react";
 import AppMain from "../../application/AppMain/AppMain";
-import { AppContextProvider } from "../../context/AppContext/AppContext";
 
 import BasicTemplate from "./BasicTemplate";
 
@@ -10,11 +9,9 @@ export default {
 };
 
 const Template = (args) => (
-    <AppContextProvider>
-        <AppMain>
-            <BasicTemplate {...args} />
-        </AppMain>
-    </AppContextProvider>
+    <AppMain>
+        <BasicTemplate {...args} />
+    </AppMain>
 );
 
 export const Default = Template.bind({});
