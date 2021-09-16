@@ -27,17 +27,22 @@ var PageNavigation = function PageNavigation(_ref) {
     collapseOnSelect: true,
     className: navbarClass,
     expand: "lg"
-  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, config.links.length && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(NavbarToggle, null), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, {
+    className: "d-block"
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
+    xs: 12,
+    className: "px-lg-0"
+  }, config.links.length && /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(NavbarToggle, null), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
     id: "pageNavigation"
   }, /*#__PURE__*/_react.default.createElement(MainNav, {
     links: config.links
-  }))))))));
+  }))))))))));
 };
 
 var MainNav = function MainNav(_ref2) {
   var links = _ref2.links;
   return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, {
-    className: "mr-auto nav"
+    className: "mx-0 nav pb-2 pb-lg-0"
   }, /*#__PURE__*/_react.default.createElement(_reactScrollspyNavigation.default, {
     offsetTop: 61
   }, links.map(function (link, idx) {
