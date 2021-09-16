@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import { Col, Container, Nav, Navbar, Row } from "react-bootstrap";
 import Scrollspy from "react-scrollspy-navigation";
 
 const PageNavigation = ({ config = {} }) => {
@@ -17,16 +17,22 @@ const PageNavigation = ({ config = {} }) => {
                             className={navbarClass}
                             expand="lg"
                         >
-                            <Container>
-                                {config.links.length && (
-                                    <>
-                                        <NavbarToggle />
+                            <Container className="d-block">
+                                <Row>
+                                    <Col xs={12}>
+                                        {config.links.length && (
+                                            <>
+                                                <NavbarToggle />
 
-                                        <Navbar.Collapse id="pageNavigation">
-                                            <MainNav links={config.links} />
-                                        </Navbar.Collapse>
-                                    </>
-                                )}
+                                                <Navbar.Collapse id="pageNavigation">
+                                                    <MainNav
+                                                        links={config.links}
+                                                    />
+                                                </Navbar.Collapse>
+                                            </>
+                                        )}
+                                    </Col>
+                                </Row>
                             </Container>
                         </Navbar>
                     </div>
@@ -38,7 +44,7 @@ const PageNavigation = ({ config = {} }) => {
 
 const MainNav = ({ links }) => {
     return (
-        <Nav className="mr-auto nav">
+        <Nav className="mx-0 nav pb-2 pb-lg-0">
             <Scrollspy offsetTop={61}>
                 {links.map((link, idx) => (
                     <Nav.Link
