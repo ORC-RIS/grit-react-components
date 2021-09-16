@@ -19,7 +19,7 @@ const PageNavigation = ({ config = {} }) => {
                         >
                             <Container className="d-block">
                                 <Row>
-                                    <Col xs={12}>
+                                    <Col xs={12} className="px-lg-0">
                                         {config.links.length && (
                                             <>
                                                 <NavbarToggle />
