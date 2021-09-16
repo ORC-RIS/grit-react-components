@@ -29,9 +29,7 @@ var Colophon = function Colophon(_ref2) {
       config = _ref2$config === void 0 ? {} : _ref2$config;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "bg-inverse py-4 py-lg-5"
-  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, {
-    className: "py-2"
-  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     className: "row-sy-4"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
     xs: 12,

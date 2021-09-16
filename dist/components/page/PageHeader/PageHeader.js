@@ -41,7 +41,8 @@ var PageHeader = function PageHeader(_ref) {
     subtitle: config.subtitle,
     title: config.title,
     titlePrefix: config.titlePrefix,
-    widgets: config.widgets
+    widgets: config.widgets,
+    centered: config.centered
   }), children));
 };
 
@@ -59,6 +60,7 @@ var PageHeaderMedia = function PageHeaderMedia(_ref2) {
 var PageHeaderContent = function PageHeaderContent(_ref3) {
   var appContext = _ref3.appContext,
       buttons = _ref3.buttons,
+      centered = _ref3.centered,
       subtitle = _ref3.subtitle,
       title = _ref3.title,
       titlePrefix = _ref3.titlePrefix,
@@ -84,11 +86,13 @@ var PageHeaderContent = function PageHeaderContent(_ref3) {
   }, title && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
     xs: 12
   }, /*#__PURE__*/_react.default.createElement(PageHeaderTitle, {
+    centered: centered,
     title: title,
     titlePrefix: titlePrefix
   })), subtitle && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
     xs: 12
   }, /*#__PURE__*/_react.default.createElement(PageHeaderSubtitle, {
+    centered: centered,
     subtitle: subtitle
   })))), /*#__PURE__*/_react.default.createElement(PageHeaderButtons, {
     buttons: buttons
@@ -98,11 +102,12 @@ var PageHeaderContent = function PageHeaderContent(_ref3) {
 };
 
 var PageHeaderTitle = function PageHeaderTitle(_ref4) {
-  var title = _ref4.title,
+  var centered = _ref4.centered,
+      title = _ref4.title,
       titlePrefix = _ref4.titlePrefix;
   return /*#__PURE__*/_react.default.createElement("h1", {
-    className: "page-header-title"
-  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "page-header-title ".concat(centered && "text-center")
+  }, titlePrefix && /*#__PURE__*/_react.default.createElement("span", {
     className: "title-prefix"
   }, titlePrefix), /*#__PURE__*/_react.default.createElement("span", {
     className: "title"
@@ -110,9 +115,10 @@ var PageHeaderTitle = function PageHeaderTitle(_ref4) {
 };
 
 var PageHeaderSubtitle = function PageHeaderSubtitle(_ref5) {
-  var subtitle = _ref5.subtitle;
+  var centered = _ref5.centered,
+      subtitle = _ref5.subtitle;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "page-header-subtitle"
+    className: "page-header-subtitle ".concat(centered && "text-center")
   }, subtitle);
 };
 
