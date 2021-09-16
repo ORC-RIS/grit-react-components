@@ -14,7 +14,7 @@ const AppFooter = ({ children, config = {} }) => {
 const Colophon = ({ config = {} }) => {
     return (
         <div className="bg-inverse py-4 py-lg-5">
-            <Container className="py-2">
+            <Container>
                 <Row className="row-sy-4">
                     <Col xs={12} lg={6}>
                         <h2 className="text-primary h4 mb-3">

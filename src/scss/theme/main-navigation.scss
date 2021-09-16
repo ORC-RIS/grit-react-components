@@ -34,8 +34,8 @@
         &.show {
             position: absolute;
             z-index: 99;
-            left: -0.5 * $grid-gutter-width-base;
-            right: -0.5 * $grid-gutter-width-base;
+            left: -1 * $spacer;
+            right: -1 * $spacer;
             top: 100%;
 
             @extend .bg-inverse-75;

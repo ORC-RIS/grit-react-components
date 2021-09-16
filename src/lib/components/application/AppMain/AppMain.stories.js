@@ -1,7 +1,6 @@
 import React from "react";
 import AppMain from "./AppMain";
 import "./../../../../scss/style.scss";
-import { AppContextProvider } from "../../context/AppContext/AppContext";
 
 export default {
     title: "Application/AppMain",
@@ -9,11 +8,9 @@ export default {
 };
 
 const Template = () => (
-    <AppContextProvider>
-        <AppMain>
-            <>This component does not have a visual representation.</>
-        </AppMain>
-    </AppContextProvider>
+    <AppMain>
+        <>This component does not have a visual representation.</>
+    </AppMain>
 );
 
 export const Default = Template.bind({});
