@@ -17,7 +17,7 @@ const Colophon = ({ config = {} }) => {
             <Container>
                 <Row className="row-sy-4">
                     <Col xs={12} lg={6}>
-                        <h2 className="text-primary h4 mb-3 font-slab-serif font-weight-normal">
+                        <h2 className="text-primary h4 mb-3 mb-lg-4 font-slab-serif font-weight-normal">
                             {config.entityTitle}
                         </h2>
 

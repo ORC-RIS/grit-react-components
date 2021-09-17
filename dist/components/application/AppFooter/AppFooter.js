@@ -35,7 +35,7 @@ var Colophon = function Colophon(_ref2) {
     xs: 12,
     lg: 6
   }, /*#__PURE__*/_react.default.createElement("h2", {
-    className: "text-primary h4 mb-3 font-slab-serif font-weight-normal"
+    className: "text-primary h4 mb-3 mb-lg-4 font-slab-serif font-weight-normal"
   }, config.entityTitle), /*#__PURE__*/_react.default.createElement("address", null, config.entityAddress), /*#__PURE__*/_react.default.createElement("p", {
     className: "mb-0"
   }, config.entityHours)), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
