@@ -35,19 +35,20 @@ var Colophon = function Colophon(_ref2) {
     xs: 12,
     lg: 6
   }, /*#__PURE__*/_react.default.createElement("h2", {
-    className: "text-primary h4 mb-3"
+    className: "text-primary h4 mb-3 font-slab-serif font-weight-normal"
   }, config.entityTitle), /*#__PURE__*/_react.default.createElement("address", null, config.entityAddress), /*#__PURE__*/_react.default.createElement("p", {
     className: "mb-0"
   }, config.entityHours)), /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
     xs: 12,
     lg: 6
   }, /*#__PURE__*/_react.default.createElement("h2", {
-    className: "h6 heading-underline letter-spacing-3"
+    className: "h6 heading-underline letter-spacing-3 mb-2 mb-lg-3"
   }, "Sitemap"), /*#__PURE__*/_react.default.createElement("ul", {
-    className: "list-unstyled mb-0"
+    className: "list-unstyled mb-0 row row-sy-lg-2"
   }, config.sitemapLinks && config.sitemapLinks.map(function (link, idx) {
     return /*#__PURE__*/_react.default.createElement("li", {
-      key: idx
+      key: idx,
+      className: "col-12"
     }, /*#__PURE__*/_react.default.createElement("a", {
       href: link.href,
       target: link.target,
