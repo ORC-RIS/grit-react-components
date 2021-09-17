@@ -27,14 +27,14 @@ const Colophon = ({ config = {} }) => {
                     </Col>
 
                     <Col xs={12} lg={6}>
-                        <h2 className="h6 heading-underline letter-spacing-3">
+                        <h2 className="h6 heading-underline letter-spacing-3 mb-2 mb-lg-3">
                             Sitemap
                         </h2>
 
-                        <ul className="list-unstyled mb-0">
+                        <ul className="list-unstyled mb-0 row row-sy-lg-2">
                             {config.sitemapLinks &&
                                 config.sitemapLinks.map((link, idx) => (
-                                    <li key={idx}>
+                                    <li key={idx} className="col-12">
                                         <a
                                             href={link.href}
                                             target={link.target}
