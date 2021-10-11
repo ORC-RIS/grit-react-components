@@ -1,12 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
-import AppContext from "../../context/AppContext/AppContext";
 
-const NavigationBar = ({ config = {} }) => {
-    const { appContext } = useContext(AppContext);
-
-    config.overlapContent = appContext.appNavigationOverlapContent;
-
+const NavigationBar = ({ config = {}, setAppContext = () => {} }) => {
     return (
         <div className="AppNavigation">
             <div className="main-navigation-wrapper">
