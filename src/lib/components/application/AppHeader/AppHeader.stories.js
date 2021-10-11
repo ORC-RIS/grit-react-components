@@ -1,6 +1,5 @@
 import React from "react";
 import AppHeader from "./AppHeader";
-import "./../../../../scss/style.scss";
 
 export default {
     title: "Application/AppHeader",

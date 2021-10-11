@@ -1,6 +1,5 @@
 import React from "react";
 import AppFooter from "./AppFooter";
-import "./../../../../scss/style.scss";
 
 export default {
     title: "Application/AppFooter",

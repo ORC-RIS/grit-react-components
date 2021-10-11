@@ -1,6 +1,5 @@
 import React from "react";
 import UcfFooter from "./UcfFooter";
-import "./../../../../scss/style.scss";
 
 export default {
     title: "UCF/UcfFooter",
