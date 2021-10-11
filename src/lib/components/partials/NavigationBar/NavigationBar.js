@@ -49,10 +49,10 @@ const MainNav = ({ links = [], linksAs }) => {
     );
 };
 
-const NavbarBrand = ({ as, content }) => {
+const NavbarBrand = (props) => {
     return (
-        <Navbar.Brand as={as} to="/" href="/">
-            {content}
+        <Navbar.Brand {...props}>
+            {props.content}
         </Navbar.Brand>
     );
 };
