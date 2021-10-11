@@ -39,6 +39,12 @@ Object.defineProperty(exports, "AppNavigation", {
     return _AppNavigation.default;
   }
 });
+Object.defineProperty(exports, "Colophon", {
+  enumerable: true,
+  get: function get() {
+    return _Colophon.default;
+  }
+});
 Object.defineProperty(exports, "BasicTemplate", {
   enumerable: true,
   get: function get() {
@@ -49,6 +55,12 @@ Object.defineProperty(exports, "NarrowTemplate", {
   enumerable: true,
   get: function get() {
     return _NarrowTemplate.default;
+  }
+});
+Object.defineProperty(exports, "NavigationBar", {
+  enumerable: true,
+  get: function get() {
+    return _NavigationBar.default;
   }
 });
 Object.defineProperty(exports, "PageContent", {
@@ -98,9 +110,13 @@ var _AppMain = _interopRequireDefault(require("./components/application/AppMain/
 
 var _AppNavigation = _interopRequireDefault(require("./components/application/AppNavigation/AppNavigation"));
 
+var _Colophon = _interopRequireDefault(require("./components/partials/Colophon/Colophon"));
+
 var _BasicTemplate = _interopRequireDefault(require("./components/templates/BasicTemplate/BasicTemplate"));
 
 var _NarrowTemplate = _interopRequireDefault(require("./components/templates/NarrowTemplate/NarrowTemplate"));
+
+var _NavigationBar = _interopRequireDefault(require("./components/partials/NavigationBar/NavigationBar"));
 
 var _PageContent = _interopRequireDefault(require("./components/page/PageContent/PageContent"));
 
