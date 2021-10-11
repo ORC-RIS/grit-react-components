@@ -6,8 +6,10 @@ import AppFooter from "./components/application/AppFooter/AppFooter";
 import AppHeader from "./components/application/AppHeader/AppHeader";
 import AppMain from "./components/application/AppMain/AppMain";
 import AppNavigation from "./components/application/AppNavigation/AppNavigation";
+import Colophon from "./components/partials/Colophon/Colophon";
 import BasicTemplate from "./components/templates/BasicTemplate/BasicTemplate";
 import NarrowTemplate from "./components/templates/NarrowTemplate/NarrowTemplate";
+import NavigationBar from "./components/partials/NavigationBar/NavigationBar";
 import PageContent from "./components/page/PageContent/PageContent";
 import PageFooter from "./components/page/PageFooter/PageFooter";
 import PageHeader from "./components/page/PageHeader/PageHeader";
@@ -23,7 +25,9 @@ export {
     AppMain,
     AppNavigation,
     BasicTemplate,
+    Colophon,
     NarrowTemplate,
+    NavigationBar,
     PageContent,
     PageFooter,
     PageHeader,
