@@ -54,14 +54,8 @@ var MainNav = function MainNav(_ref2) {
   }));
 };
 
-var NavbarBrand = function NavbarBrand(_ref3) {
-  var as = _ref3.as,
-      content = _ref3.content;
-  return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Brand, {
-    as: as,
-    to: "/",
-    href: "/"
-  }, content);
+var NavbarBrand = function NavbarBrand(props) {
+  return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Brand, props, props.content);
 };
 
 var NavbarToggle = function NavbarToggle() {

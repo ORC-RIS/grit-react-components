@@ -16,7 +16,7 @@ Default.args = {
         links: [
             {
                 text: "Page Title",
-                href: "#",
+                link: "myLink",
             },
             {
                 text: "About",
