@@ -32,7 +32,7 @@
         "clean": "rimraf dist",
         "compile": "npm run clean && cross-env NODE_ENV=production babel src/lib --out-dir dist --ignore '**/*.stories.js' && npm run build-css && npm run copy-fonts",
         "dev": "concurrently --kill-others \"npm run storybook\" \"npx npm-watch\"",
-        "copy-fonts": "cp -r ./node_modules/ucf-athena-framework/src/fonts src && cp -r src/fonts ./",
+        "copy-fonts": "cp -r ./node_modules/ucf-athena-framework/src/fonts src && cp -r src/fonts ./dist/",
         "storybook": "start-storybook -p 6006 -s public"
     },
     "watch": {
