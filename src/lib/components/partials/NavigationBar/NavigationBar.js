@@ -13,8 +13,7 @@ const NavigationBar = ({ config = {}, setAppContext = () => {} }) => {
                 >
                     <Container>
                         <NavbarBrand
-                            as={config.brandAs}
-                            content={config.brandContent}
+                            {...config.brand}
                         />
                         {config.links && <NavbarToggle />}
                         {config.links && (
