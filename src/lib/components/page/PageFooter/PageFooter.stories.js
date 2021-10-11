@@ -1,6 +1,5 @@
 import React from "react";
 import PageFooter from "./PageFooter";
-import "./../../../../scss/style.scss";
 
 export default {
     title: "Page/PageFooter",

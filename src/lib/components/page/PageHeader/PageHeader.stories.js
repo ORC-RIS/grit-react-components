@@ -1,6 +1,5 @@
 import React from "react";
 import PageHeader from "./PageHeader";
-import "./../../../../scss/style.scss";
 
 export default {
     title: "Page/PageHeader",

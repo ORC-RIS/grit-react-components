@@ -1,6 +1,5 @@
 import React from "react";
 import AppMain from "./AppMain";
-import "./../../../../scss/style.scss";
 
 export default {
     title: "Application/AppMain",

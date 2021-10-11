@@ -6,6 +6,14 @@ This package contains React components and styles that will be common to applica
 
 Install this package using npm: `npm install --save ORC-RIS/grit-react-components`.
 
+### Include CSS
+
+Import the css file from `/dist/css/` into your react project.
+
+### Using SASS files
+
+If including the `style.scss` file from `/src` generates an error where fonts cannot be found, see `src/scss/theme.scss` to see how to change the path to fonts.
+
 ## Development
 
 To develop this package locally, complete the following:

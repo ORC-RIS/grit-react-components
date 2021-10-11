@@ -3,7 +3,6 @@ import AppFooter from "../components/application/AppFooter/AppFooter";
 import AppHeader from "../components/application/AppHeader/AppHeader";
 import AppMain from "../components/application/AppMain/AppMain";
 import BasicTemplate from "../components/templates/BasicTemplate/BasicTemplate";
-import "./../../scss/style.scss";
 
 const ExampleHomePageMainContent = ({ chidren, setAppContext = () => {} }) => {
     const config = {
