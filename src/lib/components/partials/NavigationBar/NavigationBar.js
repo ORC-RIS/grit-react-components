@@ -39,15 +39,7 @@ const MainNav = ({ links = [], linksAs }) => {
                 links.map((link, idx) => {
                     return (
                         <Nav.Item as="li" key={idx}>
-                            <Nav.Link
-                                as={linksAs}
-                                className={
-                                    link.className ? link.className : false
-                                }
-                                to={link.href}
-                                href={link.href}
-                                target={link.target}
-                            >
+                            <Nav.Link as={linksAs} {...link}>
                                 {link.text}
                             </Nav.Link>
                         </Nav.Item>
