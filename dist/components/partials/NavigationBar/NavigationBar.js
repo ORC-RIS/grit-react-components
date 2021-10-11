@@ -25,10 +25,7 @@ var NavigationBar = function NavigationBar(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar, {
     collapseOnSelect: true,
     className: "main-navigation ".concat(config.overlapContent ? "overlap-content" : "")
-  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(NavbarBrand, {
-    as: config.brandAs,
-    content: config.brandContent
-  }), config.links && /*#__PURE__*/_react.default.createElement(NavbarToggle, null), config.links && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(NavbarBrand, config.brand), config.links && /*#__PURE__*/_react.default.createElement(NavbarToggle, null), config.links && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
     id: "navbarScroll"
   }, /*#__PURE__*/_react.default.createElement(MainNav, {
     links: config.links,
