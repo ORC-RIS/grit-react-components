@@ -19,8 +19,6 @@ var NavigationBar = function NavigationBar(_ref) {
       _ref$setAppContext = _ref.setAppContext,
       setAppContext = _ref$setAppContext === void 0 ? function () {} : _ref$setAppContext;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "AppNavigation"
-  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "main-navigation-wrapper"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar, {
     collapseOnSelect: true,
@@ -30,7 +28,7 @@ var NavigationBar = function NavigationBar(_ref) {
   }, /*#__PURE__*/_react.default.createElement(MainNav, {
     links: config.links,
     linksAs: config.linksAs
-  }))))));
+  })))));
 };
 
 var MainNav = function MainNav(_ref2) {

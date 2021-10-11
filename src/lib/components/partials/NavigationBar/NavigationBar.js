@@ -3,30 +3,26 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const NavigationBar = ({ config = {}, setAppContext = () => {} }) => {
     return (
-        <div className="AppNavigation">
-            <div className="main-navigation-wrapper">
-                <Navbar
-                    collapseOnSelect
-                    className={`main-navigation ${
-                        config.overlapContent ? "overlap-content" : ""
-                    }`}
-                >
-                    <Container>
-                        <NavbarBrand
-                            {...config.brand}
-                        />
-                        {config.links && <NavbarToggle />}
-                        {config.links && (
-                            <Navbar.Collapse id="navbarScroll">
-                                <MainNav
-                                    links={config.links}
-                                    linksAs={config.linksAs}
-                                />
-                            </Navbar.Collapse>
-                        )}
-                    </Container>
-                </Navbar>
-            </div>
+        <div className="main-navigation-wrapper">
+            <Navbar
+                collapseOnSelect
+                className={`main-navigation ${
+                    config.overlapContent ? "overlap-content" : ""
+                }`}
+            >
+                <Container>
+                    <NavbarBrand {...config.brand} />
+                    {config.links && <NavbarToggle />}
+                    {config.links && (
+                        <Navbar.Collapse id="navbarScroll">
+                            <MainNav
+                                links={config.links}
+                                linksAs={config.linksAs}
+                            />
+                        </Navbar.Collapse>
+                    )}
+                </Container>
+            </Navbar>
         </div>
     );
 };
@@ -49,11 +45,7 @@ const MainNav = ({ links = [], linksAs }) => {
 };
 
 const NavbarBrand = (props) => {
-    return (
-        <Navbar.Brand {...props}>
-            {props.content}
-        </Navbar.Brand>
-    );
+    return <Navbar.Brand {...props}>{props.content}</Navbar.Brand>;
 };
 
 const NavbarToggle = () => {
