@@ -19,7 +19,7 @@ If including the `style.scss` file from `/src` generates an error where fonts ca
 To develop this package locally, complete the following:
 
 1. Clone this repository into your project's parent directory.
-2. Enter the project directory and run `npm link ./grit-react-components`
+2. Enter the project directory and run `npm link ../grit-react-components`
 3. Enter the `grit-react-components` directory and run `npm install`, then `npm link ../PROJECT_DIR/react`.
 
 ### Available Scripts
