@@ -12,9 +12,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var PageFooter = function PageFooter(_ref) {
   var children = _ref.children,
       _ref$config = _ref.config,
-      config = _ref$config === void 0 ? {} : _ref$config,
-      _ref$setAppContext = _ref.setAppContext,
-      setAppContext = _ref$setAppContext === void 0 ? function () {} : _ref$setAppContext;
+      config = _ref$config === void 0 ? {} : _ref$config;
   return !config.hide && /*#__PURE__*/_react.default.createElement("div", {
     className: "PageFooter"
   }, children);
