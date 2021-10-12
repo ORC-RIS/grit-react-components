@@ -1,17 +1,14 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import narrowClass from "../../../narrowClass";
-import { AppContext } from "../../context/AppContext/AppContext";
 
 const PageHeader = ({ children, config = {} }) => {
-    const { appContext } = useContext(AppContext);
-
     return (
         !config.hide && (
             <div className="PageHeader">
                 <div
                     className={`page-header ${
-                        appContext.siteNavigationOverlapContent &&
+                        config.siteNavigationOverlapContent &&
                         "navigation-overlap-content"
                     }
                         ${config.inline && "inline"}
@@ -23,8 +20,8 @@ const PageHeader = ({ children, config = {} }) => {
                         />
                     )}
                     <PageHeaderContent
-                        appContext={appContext}
                         buttons={config.buttons}
+                        narrow={config.narrow}
                         subtitle={config.subtitle}
                         title={config.title}
                         titlePrefix={config.titlePrefix}
@@ -51,9 +48,9 @@ const PageHeaderMedia = ({ backgroundImage }) => {
 };
 
 const PageHeaderContent = ({
-    appContext,
     buttons,
     centered,
+    narrow,
     subtitle,
     title,
     titlePrefix,
@@ -63,10 +60,7 @@ const PageHeaderContent = ({
         <div className="page-header-content">
             <Container>
                 <Row className="justify-content-center">
-                    <Col
-                        xs={12}
-                        className={`${appContext.narrowContent && narrowClass}`}
-                    >
+                    <Col xs={12} className={`${narrow && narrowClass}`}>
                         <Row className="align-items-center">
                             <Col xs={12} lg>
                                 <Row className="row-sy-4 row-sy-lg-5">
@@ -117,7 +111,11 @@ const PageHeaderTitle = ({ centered, title, titlePrefix }) => {
 };
 
 const PageHeaderSubtitle = ({ centered, subtitle }) => {
-    return <div className={`page-header-subtitle ${centered && "text-center"}`}>{subtitle}</div>;
+    return (
+        <div className={`page-header-subtitle ${centered && "text-center"}`}>
+            {subtitle}
+        </div>
+    );
 };
 
 const PageHeaderButtons = ({ buttons }) => {
