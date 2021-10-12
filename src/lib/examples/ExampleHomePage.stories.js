@@ -1,10 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AppFooter from "../components/application/AppFooter/AppFooter";
 import AppHeader from "../components/application/AppHeader/AppHeader";
 import AppMain from "../components/application/AppMain/AppMain";
 import BasicTemplate from "../components/templates/BasicTemplate/BasicTemplate";
 
-const ExampleHomePageMainContent = ({ chidren, setAppContext = () => {} }) => {
+const ExampleHomePageMainContent = ({ chidren }) => {
     const config = {
         pageHeader: {
             title: (
@@ -19,13 +19,9 @@ const ExampleHomePageMainContent = ({ chidren, setAppContext = () => {} }) => {
         },
     };
 
-    useEffect(() => {
-        setAppContext({ appNavigationOverlapContent: true });
-    }, [setAppContext]);
-
     return (
         <>
-            <BasicTemplate config={config} setAppContext={setAppContext}>
+            <BasicTemplate config={config}>
                 <div className="row">
                     <div className="col-md-8">
                         <div className="card mb-4">
@@ -44,7 +40,10 @@ const ExampleHomePageMainContent = ({ chidren, setAppContext = () => {} }) => {
                                     vero voluptate voluptatibus possimus, veniam
                                     magni quis!
                                 </p>
-                                <a href="#navigable" className="btn btn-primary">
+                                <a
+                                    href="#navigable"
+                                    className="btn btn-primary"
+                                >
                                     Read More →
                                 </a>
                             </div>
@@ -70,7 +69,10 @@ const ExampleHomePageMainContent = ({ chidren, setAppContext = () => {} }) => {
                                     vero voluptate voluptatibus possimus, veniam
                                     magni quis!
                                 </p>
-                                <a href="#navigable" className="btn btn-primary">
+                                <a
+                                    href="#navigable"
+                                    className="btn btn-primary"
+                                >
                                     Read More →
                                 </a>
                             </div>
@@ -96,7 +98,10 @@ const ExampleHomePageMainContent = ({ chidren, setAppContext = () => {} }) => {
                                     vero voluptate voluptatibus possimus, veniam
                                     magni quis!
                                 </p>
-                                <a href="#navigable" className="btn btn-primary">
+                                <a
+                                    href="#navigable"
+                                    className="btn btn-primary"
+                                >
                                     Read More →
                                 </a>
                             </div>
@@ -227,11 +232,13 @@ Default.args = {
     config: {
         appHeader: {
             appNavigation: {
-                brandContent: (
-                    <>
-                        <span className="h3 mb-0">MyGritApp</span>
-                    </>
-                ),
+                brand: {
+                    content: (
+                        <>
+                            <span className="h3 mb-0">MyGritApp</span>
+                        </>
+                    ),
+                },
                 links: false,
             },
         },

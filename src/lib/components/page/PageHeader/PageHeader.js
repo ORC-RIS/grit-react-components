@@ -4,7 +4,8 @@ import narrowClass from "../../../narrowClass";
 
 const PageHeader = ({ children, config = {} }) => {
     return (
-        !config.hide && (
+        !config.hide &&
+        (config.title ?? children) && (
             <div className="PageHeader">
                 <div
                     className={`page-header ${
@@ -57,47 +58,55 @@ const PageHeaderContent = ({
     widgets,
 }) => {
     return (
-        <div className="page-header-content">
-            <Container>
-                <Row className="justify-content-center">
-                    <Col xs={12} className={`${narrow && narrowClass}`}>
-                        <Row className="align-items-center">
-                            <Col xs={12} lg>
-                                <Row className="row-sy-4 row-sy-lg-5">
-                                    {(title || subtitle) && (
-                                        <Col xs={12}>
-                                            <Row className="row-sy-3 row-sy-lg-4">
-                                                {title && (
-                                                    <Col xs={12}>
-                                                        <PageHeaderTitle
-                                                            centered={centered}
-                                                            title={title}
-                                                            titlePrefix={
-                                                                titlePrefix
-                                                            }
-                                                        />
-                                                    </Col>
-                                                )}
-                                                {subtitle && (
-                                                    <Col xs={12}>
-                                                        <PageHeaderSubtitle
-                                                            centered={centered}
-                                                            subtitle={subtitle}
-                                                        />
-                                                    </Col>
-                                                )}
-                                            </Row>
-                                        </Col>
-                                    )}
-                                    <PageHeaderButtons buttons={buttons} />
-                                </Row>
-                            </Col>
-                            {widgets && widgets.map((widget) => widget)}
-                        </Row>
-                    </Col>
-                </Row>
-            </Container>
-        </div>
+        (title ?? widgets) && (
+            <div className="page-header-content">
+                <Container>
+                    <Row className="justify-content-center">
+                        <Col xs={12} className={`${narrow && narrowClass}`}>
+                            <Row className="align-items-center">
+                                <Col xs={12} lg>
+                                    <Row className="row-sy-4 row-sy-lg-5">
+                                        {(title || subtitle) && (
+                                            <Col xs={12}>
+                                                <Row className="row-sy-3 row-sy-lg-4">
+                                                    {title && (
+                                                        <Col xs={12}>
+                                                            <PageHeaderTitle
+                                                                centered={
+                                                                    centered
+                                                                }
+                                                                title={title}
+                                                                titlePrefix={
+                                                                    titlePrefix
+                                                                }
+                                                            />
+                                                        </Col>
+                                                    )}
+                                                    {subtitle && (
+                                                        <Col xs={12}>
+                                                            <PageHeaderSubtitle
+                                                                centered={
+                                                                    centered
+                                                                }
+                                                                subtitle={
+                                                                    subtitle
+                                                                }
+                                                            />
+                                                        </Col>
+                                                    )}
+                                                </Row>
+                                            </Col>
+                                        )}
+                                        <PageHeaderButtons buttons={buttons} />
+                                    </Row>
+                                </Col>
+                                {widgets && widgets.map((widget) => widget)}
+                            </Row>
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
+        )
     );
 };
 

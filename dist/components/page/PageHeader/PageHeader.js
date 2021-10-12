@@ -14,10 +14,12 @@ var _narrowClass = _interopRequireDefault(require("../../../narrowClass"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var PageHeader = function PageHeader(_ref) {
+  var _config$title;
+
   var children = _ref.children,
       _ref$config = _ref.config,
       config = _ref$config === void 0 ? {} : _ref$config;
-  return !config.hide && /*#__PURE__*/_react.default.createElement("div", {
+  return !config.hide && ((_config$title = config.title) !== null && _config$title !== void 0 ? _config$title : children) && /*#__PURE__*/_react.default.createElement("div", {
     className: "PageHeader"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "page-header ".concat(config.siteNavigationOverlapContent && "navigation-overlap-content", "\n                        ").concat(config.inline && "inline", "\n                        ")
@@ -53,7 +55,7 @@ var PageHeaderContent = function PageHeaderContent(_ref3) {
       title = _ref3.title,
       titlePrefix = _ref3.titlePrefix,
       widgets = _ref3.widgets;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return (title !== null && title !== void 0 ? title : widgets) && /*#__PURE__*/_react.default.createElement("div", {
     className: "page-header-content"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     className: "justify-content-center"

@@ -12,7 +12,13 @@ export const Default = Template.bind({});
 
 Default.args = {
     config: {
-        brandContent: "My GRIT App",
+        brand: {
+            content: (
+                <>
+                    <span className="h3 mb-0">MyGritApp</span>
+                </>
+            ),
+        },
         links: [
             {
                 text: "Page Title",
@@ -39,12 +45,11 @@ Default.args = {
     },
 };
 
-
 export const OverlapContent = Template.bind({});
 
 OverlapContent.args = {
     config: {
         ...Default.args.config,
-        overlapContent: true
-    }
-}
+        overlapContent: true,
+    },
+};

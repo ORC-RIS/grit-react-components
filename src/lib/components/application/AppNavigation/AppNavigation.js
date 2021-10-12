@@ -18,7 +18,7 @@ const AppNavigation = ({ children, config = {} }) => {
         });
     }, [appContext, updateAppContext]);
 
-    config.overlapContent = appContext.appNavigationOverlapContent;
+    config.overlapContent = config.overlapContent ?? appContext.appNavigationOverlapContent;
 
     return (
         <div className="AppNavigation">

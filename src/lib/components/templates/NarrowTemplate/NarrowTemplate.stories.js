@@ -22,5 +22,4 @@ Default.args = {
             title: "A Narrow Template",
         },
     },
-    setAppContext: () => {},
 };
