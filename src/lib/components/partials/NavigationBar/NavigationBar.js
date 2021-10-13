@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 
-const NavigationBar = ({ config = {}, setAppContext = () => {} }) => {
+const NavigationBar = ({ config = {} }) => {
     return (
         <div className="NavigationBar">
             <div className="main-navigation-wrapper">
