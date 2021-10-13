@@ -102,7 +102,7 @@ var PageHeaderTitle = function PageHeaderTitle(_ref4) {
   return /*#__PURE__*/_react.default.createElement("h1", {
     className: "page-header-title ".concat(centered && "text-center")
   }, titlePrefix && /*#__PURE__*/_react.default.createElement("span", {
-    className: "title-prefix ".concat(inline && "text-muted")
+    className: "title-prefix ".concat(inline && "inline")
   }, titlePrefix), /*#__PURE__*/_react.default.createElement("span", {
     className: "title"
   }, title));

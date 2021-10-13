@@ -65,6 +65,10 @@
                 .text-uppercase,
                 .mb-2,
                 .mb-lg-3;
+
+            &.inline {
+                @extend .text-muted;
+            }
         }
     }
 
