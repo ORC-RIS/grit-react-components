@@ -15,10 +15,10 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 var NavigationBar = function NavigationBar(_ref) {
   var _ref$config = _ref.config,
-      config = _ref$config === void 0 ? {} : _ref$config,
-      _ref$setAppContext = _ref.setAppContext,
-      setAppContext = _ref$setAppContext === void 0 ? function () {} : _ref$setAppContext;
+      config = _ref$config === void 0 ? {} : _ref$config;
   return /*#__PURE__*/_react.default.createElement("div", {
+    className: "NavigationBar"
+  }, /*#__PURE__*/_react.default.createElement("div", {
     className: "main-navigation-wrapper"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar, {
     collapseOnSelect: true,
@@ -28,7 +28,7 @@ var NavigationBar = function NavigationBar(_ref) {
   }, /*#__PURE__*/_react.default.createElement(MainNav, {
     links: config.links,
     linksAs: config.linksAs
-  })))));
+  }))))));
 };
 
 var MainNav = function MainNav(_ref2) {

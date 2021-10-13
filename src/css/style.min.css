@@ -6378,8 +6378,6 @@ a.hover-text-underline:focus, a.hover-text-underline:active, a.hover-text-underl
 
 @media (min-width: 576px) { .page-header .page-header-media + .page-header-content { min-height: 500px; } }
 
-.main-navigation { transition: all 0.3s ease-in-out; }
-
 .main-navigation .navbar-nav > .nav-item > a, .main-navigation .navbar-brand { text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25); white-space: normal; color: white; }
 
 .main-navigation .nav-link:hover { background-color: rgba(0, 0, 0, 0.9); }
