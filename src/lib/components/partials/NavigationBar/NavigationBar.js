@@ -3,26 +3,28 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 
 const NavigationBar = ({ config = {}, setAppContext = () => {} }) => {
     return (
-        <div className="main-navigation-wrapper">
-            <Navbar
-                collapseOnSelect
-                className={`main-navigation ${
-                    config.overlapContent ? "overlap-content" : ""
-                }`}
-            >
-                <Container>
-                    <NavbarBrand {...config.brand} />
-                    {config.links && <NavbarToggle />}
-                    {config.links && (
-                        <Navbar.Collapse id="navbarScroll">
-                            <MainNav
-                                links={config.links}
-                                linksAs={config.linksAs}
-                            />
-                        </Navbar.Collapse>
-                    )}
-                </Container>
-            </Navbar>
+        <div className="NavigationBar">
+            <div className="main-navigation-wrapper">
+                <Navbar
+                    collapseOnSelect
+                    className={`main-navigation ${
+                        config.overlapContent ? "overlap-content" : ""
+                    }`}
+                >
+                    <Container>
+                        <NavbarBrand {...config.brand} />
+                        {config.links && <NavbarToggle />}
+                        {config.links && (
+                            <Navbar.Collapse id="navbarScroll">
+                                <MainNav
+                                    links={config.links}
+                                    linksAs={config.linksAs}
+                                />
+                            </Navbar.Collapse>
+                        )}
+                    </Container>
+                </Navbar>
+            </div>
         </div>
     );
 };
