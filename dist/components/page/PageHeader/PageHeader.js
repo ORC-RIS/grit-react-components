@@ -27,6 +27,7 @@ var PageHeader = function PageHeader(_ref) {
     backgroundImage: config.backgroundImage
   }), /*#__PURE__*/_react.default.createElement(PageHeaderContent, {
     buttons: config.buttons,
+    inline: config.inline,
     narrow: config.narrow,
     subtitle: config.subtitle,
     title: config.title,
@@ -50,6 +51,7 @@ var PageHeaderMedia = function PageHeaderMedia(_ref2) {
 var PageHeaderContent = function PageHeaderContent(_ref3) {
   var buttons = _ref3.buttons,
       centered = _ref3.centered,
+      inline = _ref3.inline,
       narrow = _ref3.narrow,
       subtitle = _ref3.subtitle,
       title = _ref3.title,
@@ -77,6 +79,7 @@ var PageHeaderContent = function PageHeaderContent(_ref3) {
     xs: 12
   }, /*#__PURE__*/_react.default.createElement(PageHeaderTitle, {
     centered: centered,
+    inline: inline,
     title: title,
     titlePrefix: titlePrefix
   })), subtitle && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
@@ -93,12 +96,13 @@ var PageHeaderContent = function PageHeaderContent(_ref3) {
 
 var PageHeaderTitle = function PageHeaderTitle(_ref4) {
   var centered = _ref4.centered,
+      inline = _ref4.inline,
       title = _ref4.title,
       titlePrefix = _ref4.titlePrefix;
   return /*#__PURE__*/_react.default.createElement("h1", {
     className: "page-header-title ".concat(centered && "text-center")
   }, titlePrefix && /*#__PURE__*/_react.default.createElement("span", {
-    className: "title-prefix"
+    className: "title-prefix ".concat(inline && "text-muted")
   }, titlePrefix), /*#__PURE__*/_react.default.createElement("span", {
     className: "title"
   }, title));

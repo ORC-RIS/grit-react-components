@@ -22,6 +22,7 @@ const PageHeader = ({ children, config = {} }) => {
                     )}
                     <PageHeaderContent
                         buttons={config.buttons}
+                        inline={config.inline}
                         narrow={config.narrow}
                         subtitle={config.subtitle}
                         title={config.title}
@@ -51,6 +52,7 @@ const PageHeaderMedia = ({ backgroundImage }) => {
 const PageHeaderContent = ({
     buttons,
     centered,
+    inline,
     narrow,
     subtitle,
     title,
@@ -75,6 +77,7 @@ const PageHeaderContent = ({
                                                                 centered={
                                                                     centered
                                                                 }
+                                                                inline={inline}
                                                                 title={title}
                                                                 titlePrefix={
                                                                     titlePrefix
@@ -110,10 +113,14 @@ const PageHeaderContent = ({
     );
 };
 
-const PageHeaderTitle = ({ centered, title, titlePrefix }) => {
+const PageHeaderTitle = ({ centered, inline, title, titlePrefix }) => {
     return (
         <h1 className={`page-header-title ${centered && "text-center"}`}>
-            {titlePrefix && <span className="title-prefix">{titlePrefix}</span>}
+            {titlePrefix && (
+                <span className={`title-prefix ${inline && "text-muted"}`}>
+                    {titlePrefix}
+                </span>
+            )}
             <span className="title">{title}</span>
         </h1>
     );
