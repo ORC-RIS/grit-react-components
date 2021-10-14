@@ -12,6 +12,7 @@ $athena-font-path: "./../fonts";
 
 // IMPORT THEME STYLES
 // ============================================================================
+@import "./theme/font-awesome.scss";
 @import "./theme/page-header.scss";
 @import "./theme/main-navigation.scss";
 @import "./theme/blog.scss";
