@@ -19,7 +19,7 @@ var PageHeader = function PageHeader(_ref) {
   var children = _ref.children,
       _ref$config = _ref.config,
       config = _ref$config === void 0 ? {} : _ref$config;
-  return !config.hide && ((_config$title = config.title) !== null && _config$title !== void 0 ? _config$title : children) && /*#__PURE__*/_react.default.createElement("div", {
+  return !config.hide && ((_config$title = config.title) !== null && _config$title !== void 0 ? _config$title : children) ? /*#__PURE__*/_react.default.createElement("div", {
     className: "PageHeader"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "page-header ".concat(config.siteNavigationOverlapContent && "navigation-overlap-content", "\n                        ").concat(config.inline && "inline", "\n                        ")
@@ -34,7 +34,7 @@ var PageHeader = function PageHeader(_ref) {
     titlePrefix: config.titlePrefix,
     widgets: config.widgets,
     centered: config.centered
-  }), children));
+  }), children)) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null);
 };
 
 var PageHeaderMedia = function PageHeaderMedia(_ref2) {
