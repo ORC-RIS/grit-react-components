@@ -3,37 +3,34 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import narrowClass from "../../../narrowClass";
 
 const PageHeader = ({ children, config = {} }) => {
-    return (
-        !config.hide &&
-        (config.title ?? children) && (
-            <div className="PageHeader">
-                <div
-                    className={`page-header ${
-                        config.siteNavigationOverlapContent &&
-                        "navigation-overlap-content"
-                    }
+    return !config.hide && (config.title ?? children) ? (
+        <div className="PageHeader">
+            <div
+                className={`page-header ${
+                    config.siteNavigationOverlapContent &&
+                    "navigation-overlap-content"
+                }
                         ${config.inline && "inline"}
                         `}
-                >
-                    {config.backgroundImage && (
-                        <PageHeaderMedia
-                            backgroundImage={config.backgroundImage}
-                        />
-                    )}
-                    <PageHeaderContent
-                        buttons={config.buttons}
-                        inline={config.inline}
-                        narrow={config.narrow}
-                        subtitle={config.subtitle}
-                        title={config.title}
-                        titlePrefix={config.titlePrefix}
-                        widgets={config.widgets}
-                        centered={config.centered}
-                    />
-                    {children}
-                </div>
+            >
+                {config.backgroundImage && (
+                    <PageHeaderMedia backgroundImage={config.backgroundImage} />
+                )}
+                <PageHeaderContent
+                    buttons={config.buttons}
+                    inline={config.inline}
+                    narrow={config.narrow}
+                    subtitle={config.subtitle}
+                    title={config.title}
+                    titlePrefix={config.titlePrefix}
+                    widgets={config.widgets}
+                    centered={config.centered}
+                />
+                {children}
             </div>
-        )
+        </div>
+    ) : (
+        <></>
     );
 };
 
