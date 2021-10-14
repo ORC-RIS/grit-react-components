@@ -12,6 +12,7 @@
         @extend %fa-icon;
         @extend .fas;
         content: fa-content($fa-var-calendar-alt);
+        line-height: inherit !important;
     }
 }
 
@@ -29,6 +30,7 @@
         @extend %fa-icon;
         @extend .fas;
         content: fa-content($fa-var-clock);
+        line-height: inherit !important;
     }
 }
 
@@ -46,6 +48,7 @@
         @extend %fa-icon;
         @extend .fas;
         content: fa-content($fa-var-info-circle);
+        line-height: inherit !important;
     }
 }
 
@@ -63,6 +66,7 @@
         @extend %fa-icon;
         @extend .fas;
         content: fa-content($fa-var-user);
+        line-height: inherit !important;
     }
 }
 
@@ -80,5 +84,6 @@
         @extend %fa-icon;
         @extend .fas;
         content: fa-content($fa-var-building);
+        line-height: inherit !important;
     }
 }

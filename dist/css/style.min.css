@@ -9404,20 +9404,20 @@ readers do not read off random characters that represent icons */
 
 .post-date { position: relative; padding-left: 2rem; }
 
-.post-date:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f073"; }
+.post-date:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f073"; line-height: inherit !important; }
 
 .post-time { position: relative; padding-left: 2rem; }
 
-.post-time:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f017"; }
+.post-time:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f017"; line-height: inherit !important; }
 
 .post-info { position: relative; padding-left: 2rem; }
 
-.post-info:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f05a"; }
+.post-info:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f05a"; line-height: inherit !important; }
 
 .post-author { position: relative; padding-left: 2rem; }
 
-.post-author:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f007"; }
+.post-author:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f007"; line-height: inherit !important; }
 
 .post-company { position: relative; padding-left: 2rem; }
 
-.post-company:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f1ad"; }
+.post-company:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f1ad"; line-height: inherit !important; }
