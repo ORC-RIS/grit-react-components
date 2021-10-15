@@ -22,18 +22,27 @@ var PageContent = function PageContent(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, {
     className: "mt-4 mt-lg-5"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
-    className: "justify-content-center"
+    className: "".concat(config.narrow ? "justify-content-center" : "justify-content-between")
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
     xs: 12,
-    className: "".concat(config.narrow && _narrowClass.default)
-  }, /*#__PURE__*/_react.default.createElement(PageContentWrapper, null, children)))));
+    className: "".concat(config.narrow && _narrowClass.default, " ").concat(config.sidebar && "col-lg-7")
+  }, /*#__PURE__*/_react.default.createElement(PageContentWrapper, null, children)), config.sidebar && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
+    xs: 12,
+    lg: 4
+  }, /*#__PURE__*/_react.default.createElement(SidebarContentWrapper, null, config.sidebar)))));
 };
 
 var PageContentWrapper = function PageContentWrapper(_ref2) {
-  var children = _ref2.children,
-      config = _ref2.config;
+  var children = _ref2.children;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "PageContentWrapper mb-4 mb-lg-5"
+  }, children);
+};
+
+var SidebarContentWrapper = function SidebarContentWrapper(_ref3) {
+  var children = _ref3.children;
+  return /*#__PURE__*/_react.default.createElement("div", {
+    className: "SidebarContentWrapper mb-4 mb-lg-5"
   }, children);
 };
 
