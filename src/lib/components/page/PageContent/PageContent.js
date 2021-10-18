@@ -16,7 +16,7 @@ const PageContent = ({ children, config = {} }) => {
                     <Col
                         xs={12}
                         className={`${config.narrow && narrowClass} ${
-                            config.sidebar && "col-lg-7"
+                            config.sidebar && "col-lg-8"
                         }`}
                     >
                         <PageContentWrapper>{children}</PageContentWrapper>
