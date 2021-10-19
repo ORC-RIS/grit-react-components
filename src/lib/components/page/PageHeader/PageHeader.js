@@ -112,14 +112,16 @@ const PageHeaderContent = ({
 
 const PageHeaderTitle = ({ centered, inline, title, titlePrefix }) => {
     return (
-        <h1 className={`page-header-title ${centered && "text-center"}`}>
+        <>
             {titlePrefix && (
                 <span className={`title-prefix ${inline && "inline"}`}>
                     {titlePrefix}
                 </span>
             )}
-            <span className="title">{title}</span>
-        </h1>
+            <h1 className={`page-header-title ${centered && "text-center"}`}>
+                <span className="title">{title}</span>
+            </h1>
+        </>
     );
 };
 
