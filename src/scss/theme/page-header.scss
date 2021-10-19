@@ -54,22 +54,22 @@
         }
     }
 
+    .page-header-title-prefix {
+        @extend .d-block,
+            .h6,
+            .text-primary,
+            .font-weight-bold,
+            .text-uppercase,
+            .mb-2,
+            .mb-lg-3;
+
+        &.inline {
+            @extend .text-muted;
+        }
+    }
+
     .page-header-title {
         @extend .mb-0, .text-inverse;
-
-        .title-prefix {
-            @extend .d-block,
-                .h6,
-                .text-primary,
-                .font-weight-bold,
-                .text-uppercase,
-                .mb-2,
-                .mb-lg-3;
-
-            &.inline {
-                @extend .text-muted;
-            }
-        }
     }
 
     .page-header-subtitle {
