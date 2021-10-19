@@ -99,13 +99,13 @@ var PageHeaderTitle = function PageHeaderTitle(_ref4) {
       inline = _ref4.inline,
       title = _ref4.title,
       titlePrefix = _ref4.titlePrefix;
-  return /*#__PURE__*/_react.default.createElement("h1", {
-    className: "page-header-title ".concat(centered && "text-center")
-  }, titlePrefix && /*#__PURE__*/_react.default.createElement("span", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, titlePrefix && /*#__PURE__*/_react.default.createElement("span", {
     className: "title-prefix ".concat(inline && "inline")
-  }, titlePrefix), /*#__PURE__*/_react.default.createElement("span", {
+  }, titlePrefix), /*#__PURE__*/_react.default.createElement("h1", {
+    className: "page-header-title ".concat(centered && "text-center")
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "title"
-  }, title));
+  }, title)));
 };
 
 var PageHeaderSubtitle = function PageHeaderSubtitle(_ref5) {
