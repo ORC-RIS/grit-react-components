@@ -1,4 +1,4 @@
-@import '~ucf-athena-framework/src/scss/_variables.scss';
+@import "~ucf-athena-framework/src/scss/_variables.scss";
 
 ._d-flex {
     display: flex;
@@ -62,32 +62,32 @@
 }
 
 .row-sy-2 {
-    margin-top: -1 * ($spacer-y * .25);
-    margin-bottom: -1 * ($spacer-y * .25);
+    margin-top: -1 * ($spacer-y * 0.25);
+    margin-bottom: -1 * ($spacer-y * 0.25);
 
     > [class*="col"] {
-        padding-top: ($spacer-y * .25);
-        padding-bottom: ($spacer-y * .25);
+        padding-top: ($spacer-y * 0.25);
+        padding-bottom: ($spacer-y * 0.25);
     }
 }
 
 .row-sy-3 {
-    margin-top: -1 * ($spacer-y * .5);
-    margin-bottom: -1 * ($spacer-y * .5);
+    margin-top: -1 * ($spacer-y * 0.5);
+    margin-bottom: -1 * ($spacer-y * 0.5);
 
     > [class*="col"] {
-        padding-top: ($spacer-y * .5);
-        padding-bottom: ($spacer-y * .5);
+        padding-top: ($spacer-y * 0.5);
+        padding-bottom: ($spacer-y * 0.5);
     }
 }
 
 .row-sy-4 {
-    margin-top: -1 * ($spacer-y * .75);
-    margin-bottom: -1 * ($spacer-y * .75);
+    margin-top: -1 * ($spacer-y * 0.75);
+    margin-bottom: -1 * ($spacer-y * 0.75);
 
     > [class*="col"] {
-        padding-top: ($spacer-y * .75);
-        padding-bottom: ($spacer-y * .75);
+        padding-top: ($spacer-y * 0.75);
+        padding-bottom: ($spacer-y * 0.75);
     }
 }
 
@@ -103,29 +103,29 @@
 
 @media (min-width: 992px) {
     .row-sy-lg-3 {
-        margin-top: -1 * ($spacer-y * .5);
-        margin-bottom: -1 * ($spacer-y * .5);
-    
+        margin-top: -1 * ($spacer-y * 0.5);
+        margin-bottom: -1 * ($spacer-y * 0.5);
+
         > [class*="col"] {
-            padding-top: ($spacer-y * .5);
-            padding-bottom: ($spacer-y * .5);
+            padding-top: ($spacer-y * 0.5);
+            padding-bottom: ($spacer-y * 0.5);
         }
     }
 
     .row-sy-lg-4 {
-        margin-top: -1 * ($spacer-y * .75);
-        margin-bottom: -1 * ($spacer-y * .75);
+        margin-top: -1 * ($spacer-y * 0.75);
+        margin-bottom: -1 * ($spacer-y * 0.75);
 
         > [class*="col"] {
-            padding-top: ($spacer-y * .75);
-            padding-bottom: ($spacer-y * .75);
+            padding-top: ($spacer-y * 0.75);
+            padding-bottom: ($spacer-y * 0.75);
         }
     }
 
     .row-sy-lg-5 {
         margin-top: -1 * ($spacer-y * 1.5);
         margin-bottom: -1 * ($spacer-y * 1.5);
-    
+
         > [class*="col"] {
             padding-top: ($spacer-y * 1.5);
             padding-bottom: ($spacer-y * 1.5);
@@ -163,4 +163,3 @@
 .text-shadow-hard {
     text-shadow: 0 1px 0 #000;
 }
-

@@ -1,18 +1,20 @@
 import React from "react";
-import PageContent from "../../page/PageContent/PageContent";
 import PageFooter from "../../page/PageFooter/PageFooter";
 import PageHeader from "../../page/PageHeader/PageHeader";
 import PageNavigation from "../../page/PageNavigation/PageNavigation";
 
-const BasicTemplate = ({ children, config = {} }) => {
+const FullWidthTemplate = ({
+    children,
+    config = {},
+}) => {
     return (
         <>
             <PageHeader config={config.pageHeader} />
             <PageNavigation config={config.pageNavigation} />
-            <PageContent config={config.pageContent}>{children}</PageContent>
+            {children}
             <PageFooter config={config.pageFooter} />
         </>
     );
 };
 
-export default BasicTemplate;
+export default FullWidthTemplate;
