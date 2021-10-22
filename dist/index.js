@@ -51,6 +51,12 @@ Object.defineProperty(exports, "BasicTemplate", {
     return _BasicTemplate.default;
   }
 });
+Object.defineProperty(exports, "Breadcrumbs", {
+  enumerable: true,
+  get: function get() {
+    return _Breadcrumbs.default;
+  }
+});
 Object.defineProperty(exports, "NarrowTemplate", {
   enumerable: true,
   get: function get() {
@@ -113,6 +119,8 @@ var _AppNavigation = _interopRequireDefault(require("./components/application/Ap
 var _Colophon = _interopRequireDefault(require("./components/partials/Colophon/Colophon"));
 
 var _BasicTemplate = _interopRequireDefault(require("./components/templates/BasicTemplate/BasicTemplate"));
+
+var _Breadcrumbs = _interopRequireDefault(require("./components/partials/Breadcrumb/Breadcrumbs"));
 
 var _NarrowTemplate = _interopRequireDefault(require("./components/templates/NarrowTemplate/NarrowTemplate"));
 
