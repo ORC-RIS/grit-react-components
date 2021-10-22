@@ -32,12 +32,25 @@ var Breadcrumbs = function Breadcrumbs(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_Breadcrumb.default, {
     listProps: config.listProps
   }, config.links && config.links.map(function (link, idx) {
-    return /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
-      href: link.href,
-      linkAs: config.linksAs,
-      linkProps: link,
-      key: idx
-    }, link.text);
+    if (idx !== config.links.length - 2) {
+      return /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
+        href: link.href,
+        linkAs: config.linksAs,
+        linkProps: link,
+        key: idx,
+        className: "d-none d-sm-inline-block"
+      }, link.text);
+    } else {
+      //if its in a small screen display the arrow symbol and link instead of /
+      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
+        href: link.href,
+        linkAs: config.linksAs,
+        linkProps: link,
+        key: idx
+      }, /*#__PURE__*/_react.default.createElement("i", {
+        class: "fas fa-arrow-left"
+      }), " ", link.text));
+    }
   })))));
 };
 
