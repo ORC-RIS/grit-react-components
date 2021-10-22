@@ -7,6 +7,7 @@ import AppHeader from "./components/application/AppHeader/AppHeader";
 import AppMain from "./components/application/AppMain/AppMain";
 import AppNavigation from "./components/application/AppNavigation/AppNavigation";
 import BasicTemplate from "./components/templates/BasicTemplate/BasicTemplate";
+import Breadcrumbs from "./components/partials/Breadcrumb/Breadcrumbs";
 import Colophon from "./components/partials/Colophon/Colophon";
 import FullWidthTemplate from "./components/templates/FullWidthTemplate/FullWidthTemplate";
 import NarrowTemplate from "./components/templates/NarrowTemplate/NarrowTemplate";
@@ -26,6 +27,7 @@ export {
     AppMain,
     AppNavigation,
     BasicTemplate,
+    Breadcrumbs,
     Colophon,
     FullWidthTemplate,
     NarrowTemplate,

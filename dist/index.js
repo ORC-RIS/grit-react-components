@@ -57,6 +57,12 @@ Object.defineProperty(exports, "FullWidthTemplate", {
     return _FullWidthTemplate.default;
   }
 });
+Object.defineProperty(exports, "Breadcrumbs", {
+  enumerable: true,
+  get: function get() {
+    return _Breadcrumbs.default;
+  }
+});
 Object.defineProperty(exports, "NarrowTemplate", {
   enumerable: true,
   get: function get() {
@@ -121,6 +127,8 @@ var _BasicTemplate = _interopRequireDefault(require("./components/templates/Basi
 var _Colophon = _interopRequireDefault(require("./components/partials/Colophon/Colophon"));
 
 var _FullWidthTemplate = _interopRequireDefault(require("./components/templates/FullWidthTemplate/FullWidthTemplate"));
+
+var _Breadcrumbs = _interopRequireDefault(require("./components/partials/Breadcrumb/Breadcrumbs"));
 
 var _NarrowTemplate = _interopRequireDefault(require("./components/templates/NarrowTemplate/NarrowTemplate"));
 
