@@ -3,12 +3,14 @@ import PageContent from "../../page/PageContent/PageContent";
 import PageFooter from "../../page/PageFooter/PageFooter";
 import PageHeader from "../../page/PageHeader/PageHeader";
 import PageNavigation from "../../page/PageNavigation/PageNavigation";
+import { Breadcrumbs } from "../../..";
 
 const NarrowTemplate = ({ children, config = {} }) => {
     const narrow = true;
 
     return (
         <>
+            <Breadcrumbs config= {config.breadcrumbs}/>
             <PageHeader config={{ narrow, ...config.pageHeader }}>
                 {config.pageHeader?.children}
             </PageHeader>

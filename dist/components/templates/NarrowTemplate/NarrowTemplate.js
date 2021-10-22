@@ -15,6 +15,8 @@ var _PageHeader = _interopRequireDefault(require("../../page/PageHeader/PageHead
 
 var _PageNavigation = _interopRequireDefault(require("../../page/PageNavigation/PageNavigation"));
 
+var _ = require("../../..");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) { symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); } keys.push.apply(keys, symbols); } return keys; }
@@ -30,7 +32,9 @@ var NarrowTemplate = function NarrowTemplate(_ref) {
       _ref$config = _ref.config,
       config = _ref$config === void 0 ? {} : _ref$config;
   var narrow = true;
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_PageHeader.default, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_.Breadcrumbs, {
+    config: config.breadcrumbs
+  }), /*#__PURE__*/_react.default.createElement(_PageHeader.default, {
     config: _objectSpread({
       narrow: narrow
     }, config.pageHeader)
