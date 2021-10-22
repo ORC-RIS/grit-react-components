@@ -39,16 +39,22 @@ Object.defineProperty(exports, "AppNavigation", {
     return _AppNavigation.default;
   }
 });
+Object.defineProperty(exports, "BasicTemplate", {
+  enumerable: true,
+  get: function get() {
+    return _BasicTemplate.default;
+  }
+});
 Object.defineProperty(exports, "Colophon", {
   enumerable: true,
   get: function get() {
     return _Colophon.default;
   }
 });
-Object.defineProperty(exports, "BasicTemplate", {
+Object.defineProperty(exports, "FullWidthTemplate", {
   enumerable: true,
   get: function get() {
-    return _BasicTemplate.default;
+    return _FullWidthTemplate.default;
   }
 });
 Object.defineProperty(exports, "Breadcrumbs", {
@@ -116,9 +122,11 @@ var _AppMain = _interopRequireDefault(require("./components/application/AppMain/
 
 var _AppNavigation = _interopRequireDefault(require("./components/application/AppNavigation/AppNavigation"));
 
+var _BasicTemplate = _interopRequireDefault(require("./components/templates/BasicTemplate/BasicTemplate"));
+
 var _Colophon = _interopRequireDefault(require("./components/partials/Colophon/Colophon"));
 
-var _BasicTemplate = _interopRequireDefault(require("./components/templates/BasicTemplate/BasicTemplate"));
+var _FullWidthTemplate = _interopRequireDefault(require("./components/templates/FullWidthTemplate/FullWidthTemplate"));
 
 var _Breadcrumbs = _interopRequireDefault(require("./components/partials/Breadcrumb/Breadcrumbs"));
 
