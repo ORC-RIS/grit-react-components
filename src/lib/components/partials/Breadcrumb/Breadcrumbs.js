@@ -10,21 +10,24 @@ const Breadcrumbs = ({ config = {} }) => {
                 : "mb-0",
     };
 
+    config.container = config.container ? config.container : "true";
+
     return config.links ? (
         <div className="Breadcrumbs">
             <div
                 className={
-                    config.wrapperClass
-                        ? config.wrapperClass
-                        : "bg-faded px-3 py-2"
+                    config.wrapperClass ? config.wrapperClass : "bg-faded py-2"
                 }
             >
                 <div
-                    className={
-                        config.innerWrapperClass
-                            ? config.innerWrapperClass
-                            : "py-1"
-                    }
+                    className={`
+                        ${
+                            config.innerWrapperClass
+                                ? config.innerWrapperClass
+                                : "py-1"
+                        }
+                        ${config.container ? "container" : "px-3"}
+                        `}
                 >
                     <Breadcrumb listProps={config.listProps}>
                         {config.links &&

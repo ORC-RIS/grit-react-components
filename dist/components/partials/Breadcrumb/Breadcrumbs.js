@@ -23,12 +23,13 @@ var Breadcrumbs = function Breadcrumbs(_ref) {
   config.listProps = _objectSpread(_objectSpread({}, config.listProps), {}, {
     className: config.listProps && config.listProps.className ? config.listProps.className + " mb-0" : "mb-0"
   });
+  config.container = config.container ? config.container : "true";
   return config.links ? /*#__PURE__*/_react.default.createElement("div", {
     className: "Breadcrumbs"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: config.wrapperClass ? config.wrapperClass : "bg-faded px-3 py-2"
+    className: config.wrapperClass ? config.wrapperClass : "bg-faded py-2"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: config.innerWrapperClass ? config.innerWrapperClass : "py-1"
+    className: "\n                        ".concat(config.innerWrapperClass ? config.innerWrapperClass : "py-1", "\n                        ").concat(config.container ? "container" : "px-3", "\n                        ")
   }, /*#__PURE__*/_react.default.createElement(_Breadcrumb.default, {
     listProps: config.listProps
   }, config.links && config.links.map(function (link, idx) {
