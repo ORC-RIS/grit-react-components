@@ -10,7 +10,7 @@ const Breadcrumbs = ({ config = {} }) => {
                 : "mb-0",
     };
 
-    return (
+    return config.links ? (
         <div className="Breadcrumbs">
             <div
                 className={
@@ -44,6 +44,8 @@ const Breadcrumbs = ({ config = {} }) => {
                 </div>
             </div>
         </div>
+    ) : (
+        <></>
     );
 };
 

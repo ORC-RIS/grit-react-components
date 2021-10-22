@@ -23,7 +23,7 @@ var Breadcrumbs = function Breadcrumbs(_ref) {
   config.listProps = _objectSpread(_objectSpread({}, config.listProps), {}, {
     className: config.listProps && config.listProps.className ? config.listProps.className + " mb-0" : "mb-0"
   });
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return config.links ? /*#__PURE__*/_react.default.createElement("div", {
     className: "Breadcrumbs"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: config.wrapperClass ? config.wrapperClass : "bg-faded px-3 py-2"
@@ -38,7 +38,7 @@ var Breadcrumbs = function Breadcrumbs(_ref) {
       linkProps: link,
       key: idx
     }, link.text);
-  })))));
+  }))))) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null);
 };
 
 var _default = Breadcrumbs;
