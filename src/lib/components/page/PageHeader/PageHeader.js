@@ -114,7 +114,9 @@ const PageHeaderTitle = ({ centered, inline, title, titlePrefix }) => {
     return (
         <>
             {titlePrefix && (
-                <span className={`page-header-title-prefix ${inline && "inline"}`}>
+                <span
+                    className={`page-header-title-prefix ${inline && "inline"}`}
+                >
                     {titlePrefix}
                 </span>
             )}
