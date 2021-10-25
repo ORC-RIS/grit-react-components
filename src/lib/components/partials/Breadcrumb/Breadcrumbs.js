@@ -34,7 +34,6 @@ const Breadcrumbs = ({config = {}}) => {
                             } else 
                             {
                                 
-                                //if its in a small screen display the arrow symbol and link instead of /
                                 return (
                                     <>
                                     <Breadcrumb.Item
@@ -42,8 +41,19 @@ const Breadcrumbs = ({config = {}}) => {
                                         linkAs={config.linksAs}
                                         linkProps={link}
                                         key={idx}
+                                        className = "d-block d-sm-none"
                                     >
                                         <i class="fas fa-arrow-left"></i> {link.text}
+                                    </Breadcrumb.Item>
+
+                                    <Breadcrumb.Item
+                                        href={link.href}
+                                        linkAs={config.linksAs}
+                                        linkProps={link}
+                                        key={idx}
+                                        className = "d-none d-sm-inline-block breadcrumb-item"
+                                    >
+                                        {link.text}
                                     </Breadcrumb.Item>
                                     </>
                                 ); 

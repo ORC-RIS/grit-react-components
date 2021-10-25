@@ -41,15 +41,21 @@ var Breadcrumbs = function Breadcrumbs(_ref) {
         className: "d-none d-sm-inline-block"
       }, link.text);
     } else {
-      //if its in a small screen display the arrow symbol and link instead of /
       return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
         href: link.href,
         linkAs: config.linksAs,
         linkProps: link,
-        key: idx
+        key: idx,
+        className: "d-block d-sm-none"
       }, /*#__PURE__*/_react.default.createElement("i", {
         class: "fas fa-arrow-left"
-      }), " ", link.text));
+      }), " ", link.text), /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
+        href: link.href,
+        linkAs: config.linksAs,
+        linkProps: link,
+        key: idx,
+        className: "d-none d-sm-inline-block breadcrumb-item"
+      }, link.text));
     }
   })))));
 };
