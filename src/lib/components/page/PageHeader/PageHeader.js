@@ -36,7 +36,7 @@ const PageHeader = ({ children, config = {} }) => {
 
 const PageHeaderMedia = ({ backgroundImage }) => {
     return (
-        <div className="page-header-media">
+        <div className="page-header-media bg-inverse">
             <img
                 className="page-header-image"
                 src={backgroundImage}
