@@ -1,7 +1,7 @@
 @import "~ucf-athena-framework/src/scss/_variables.scss";
 
 //Replaces seperator when size of the screen is on xs
-@media only screen and ($grid-breakpoints-sm)
+@media(min-width: $grid-breakpoints-sm)
 {
     .breadcrumb-item + .breadcrumb-item::before {
         content: " ";
