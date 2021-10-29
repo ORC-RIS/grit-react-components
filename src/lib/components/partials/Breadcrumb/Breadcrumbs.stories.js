@@ -16,18 +16,23 @@ Default.args = {
                 {
                     text: "Home",
                     href: "#",
+                    className: "",
                 },
                 {
                     text: "Library",
                     href: "#",
+                    className: "",
+
                 },
                 {
                     text: "Workshops",
                     href: "#",
+                    className: "",
                 },
                 {
                     text: "Contact Us",
                     href: "#",
+                    className: "",
                 },
             ],
         },

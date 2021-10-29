@@ -1,0 +1,16 @@
+@import "~ucf-athena-framework/src/scss/_variables.scss";
+
+@media only screen and (max-width: map-get($grid-breakpoints, sm)) {
+    .breadcrumb-item:not(:nth-last-child(2)) {
+        display: none !important;
+    }
+
+    .breadcrumb-item:nth-last-child(2) {
+        &:before {
+            content: fa-content($fa-var-arrow-left);
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            font-size: .875em;
+        }
+    }
+}
