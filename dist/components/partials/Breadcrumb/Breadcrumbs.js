@@ -32,31 +32,12 @@ var Breadcrumbs = function Breadcrumbs(_ref) {
   }, /*#__PURE__*/_react.default.createElement(_Breadcrumb.default, {
     listProps: config.listProps
   }, config.links && config.links.map(function (link, idx) {
-    if (idx !== config.links.length - 2) {
-      return /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
-        href: link.href,
-        linkAs: config.linksAs,
-        linkProps: link,
-        key: idx,
-        className: "d-none d-sm-inline-block"
-      }, link.text);
-    } else {
-      return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
-        href: link.href,
-        linkAs: config.linksAs,
-        linkProps: link,
-        key: idx,
-        className: "d-block d-sm-none"
-      }, /*#__PURE__*/_react.default.createElement("i", {
-        class: "fas fa-arrow-left"
-      }), " ", link.text), /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
-        href: link.href,
-        linkAs: config.linksAs,
-        linkProps: link,
-        key: idx,
-        className: "d-none d-sm-inline-block breadcrumb-item"
-      }, link.text));
-    }
+    return /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
+      href: link.href,
+      linkAs: config.linksAs,
+      linkProps: link,
+      key: idx
+    }, link.text);
   })))));
 };
 
