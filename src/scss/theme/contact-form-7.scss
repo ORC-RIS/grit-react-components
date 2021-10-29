@@ -1,0 +1,29 @@
+.wpcf7 {
+    .screen-reader-response {
+        @extend .d-none;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        @extend .form-control;
+    }
+
+    .error-message {
+        @extend .d-block;
+        @extend .alert;
+        @extend .alert-danger;
+        @extend .p-3;
+
+        padding: $alert-padding-x;
+    }
+
+    [class*="NotValidTip"] {
+        @extend .d-block;
+        @extend .alert;
+        @extend .alert-danger;
+        @extend .p-3;
+
+        padding: $alert-padding-x;
+    }
+}

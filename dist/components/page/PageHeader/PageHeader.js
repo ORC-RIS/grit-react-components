@@ -40,7 +40,7 @@ var PageHeader = function PageHeader(_ref) {
 var PageHeaderMedia = function PageHeaderMedia(_ref2) {
   var backgroundImage = _ref2.backgroundImage;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "page-header-media"
+    className: "page-header-media bg-inverse"
   }, /*#__PURE__*/_react.default.createElement("img", {
     className: "page-header-image",
     src: backgroundImage,

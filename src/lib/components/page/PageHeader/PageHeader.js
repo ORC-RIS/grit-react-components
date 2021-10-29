@@ -36,7 +36,7 @@ const PageHeader = ({ children, config = {} }) => {
 
 const PageHeaderMedia = ({ backgroundImage }) => {
     return (
-        <div className="page-header-media">
+        <div className="page-header-media bg-inverse">
             <img
                 className="page-header-image"
                 src={backgroundImage}
@@ -114,7 +114,9 @@ const PageHeaderTitle = ({ centered, inline, title, titlePrefix }) => {
     return (
         <>
             {titlePrefix && (
-                <span className={`page-header-title-prefix ${inline && "inline"}`}>
+                <span
+                    className={`page-header-title-prefix ${inline && "inline"}`}
+                >
                     {titlePrefix}
                 </span>
             )}

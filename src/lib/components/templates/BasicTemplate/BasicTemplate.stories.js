@@ -22,6 +22,22 @@ Default.args = {
         pageHeader: {
             title: "A Basic Template",
         },
+        breadcrumbs: {
+            links: [
+                {
+                    text: "Home",
+                    href: "#",
+                },
+                {
+                    text: "Library",
+                    href: "#",
+                },
+                {
+                    text: "Workshops",
+                    href: "#",
+                },
+            ]
+        },
     },
     setAppContext: () => {},
 };
