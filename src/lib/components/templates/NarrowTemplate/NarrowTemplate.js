@@ -1,24 +1,28 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PageContent from "../../page/PageContent/PageContent";
 import PageFooter from "../../page/PageFooter/PageFooter";
 import PageHeader from "../../page/PageHeader/PageHeader";
 import PageNavigation from "../../page/PageNavigation/PageNavigation";
+import { Breadcrumbs } from "../../..";
 
-const NarrowTemplate = ({
-    children,
-    config = {},
-    setAppContext = () => {},
-}) => {
-    useEffect(() => {
-        setAppContext({ narrowContent: true });
-    }, [setAppContext]);
+const NarrowTemplate = ({ children, config = {} }) => {
+    const narrow = true;
 
     return (
         <>
-            <PageHeader config={config.pageHeader} />
-            <PageNavigation config={config.pageNavigation} />
-            <PageContent config={config.pageContent}>{children}</PageContent>
-            <PageFooter config={config.pageFooter} />
+            <Breadcrumbs config= {config.breadcrumbs}/>
+            <PageHeader config={{ narrow, ...config.pageHeader }}>
+                {config.pageHeader?.children}
+            </PageHeader>
+            <PageNavigation config={{ narrow, ...config.pageNavigation }}>
+                {config.pageNavigation?.children}
+            </PageNavigation>
+            <PageContent config={{ narrow, ...config.pageContent }}>
+                {children}
+            </PageContent>
+            <PageFooter config={{ narrow, ...config.pageFooter }}>
+                {config.pageFooter?.children}
+            </PageFooter>
         </>
     );
 };

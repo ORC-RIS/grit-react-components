@@ -38,6 +38,8 @@ function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Sy
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 var AppNavigation = function AppNavigation(_ref) {
+  var _config$overlapConten;
+
   var children = _ref.children,
       _ref$config = _ref.config,
       config = _ref$config === void 0 ? {} : _ref$config;
@@ -63,7 +65,7 @@ var AppNavigation = function AppNavigation(_ref) {
       payload: _objectSpread({}, appContext)
     });
   }, [appContext, updateAppContext]);
-  config.overlapContent = appContext.appNavigationOverlapContent;
+  config.overlapContent = (_config$overlapConten = config.overlapContent) !== null && _config$overlapConten !== void 0 ? _config$overlapConten : appContext.appNavigationOverlapContent;
   return /*#__PURE__*/_react.default.createElement("div", {
     className: "AppNavigation"
   }, /*#__PURE__*/_react.default.createElement(_NavigationBar.default, {

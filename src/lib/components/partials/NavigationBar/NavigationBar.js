@@ -1,9 +1,9 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 
-const NavigationBar = ({ config = {}, setAppContext = () => {} }) => {
+const NavigationBar = ({ config = {} }) => {
     return (
-        <div className="AppNavigation">
+        <div className="NavigationBar">
             <div className="main-navigation-wrapper">
                 <Navbar
                     collapseOnSelect
@@ -12,9 +12,7 @@ const NavigationBar = ({ config = {}, setAppContext = () => {} }) => {
                     }`}
                 >
                     <Container>
-                        <NavbarBrand
-                            {...config.brand}
-                        />
+                        <NavbarBrand {...config.brand} />
                         {config.links && <NavbarToggle />}
                         {config.links && (
                             <Navbar.Collapse id="navbarScroll">
@@ -49,11 +47,7 @@ const MainNav = ({ links = [], linksAs }) => {
 };
 
 const NavbarBrand = (props) => {
-    return (
-        <Navbar.Brand {...props}>
-            {props.content}
-        </Navbar.Brand>
-    );
+    return <Navbar.Brand {...props}>{props.content}</Navbar.Brand>;
 };
 
 const NavbarToggle = () => {

@@ -3,13 +3,16 @@
     padding-left: 2rem;
 
     &:before {
-        content: "\f073";
         position: absolute;
         left: 0;
-        font-family: "FontAwesome";
         display: inline-block;
         text-align: center;
         width: 1.25rem;
+
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-calendar-alt);
+        line-height: inherit !important;
     }
 }
 
@@ -18,13 +21,16 @@
     padding-left: 2rem;
 
     &:before {
-        content: "\f017";
         position: absolute;
         left: 0;
-        font-family: "FontAwesome";
         display: inline-block;
         text-align: center;
         width: 1.25rem;
+
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-clock);
+        line-height: inherit !important;
     }
 }
 
@@ -33,13 +39,16 @@
     padding-left: 2rem;
 
     &:before {
-        content: "\f05a";
         position: absolute;
         left: 0;
-        font-family: "FontAwesome";
         display: inline-block;
         text-align: center;
         width: 1.25rem;
+
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-info-circle);
+        line-height: inherit !important;
     }
 }
 
@@ -48,13 +57,16 @@
     padding-left: 2rem;
 
     &:before {
-        content: "\f007";
         position: absolute;
         left: 0;
-        font-family: "FontAwesome";
         display: inline-block;
         text-align: center;
         width: 1.25rem;
+
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-user);
+        line-height: inherit !important;
     }
 }
 
@@ -63,12 +75,15 @@
     padding-left: 2rem;
 
     &:before {
-        content: "\f1ad";
         position: absolute;
         left: 0;
-        font-family: "FontAwesome";
         display: inline-block;
         text-align: center;
         width: 1.25rem;
+
+        @extend %fa-icon;
+        @extend .fas;
+        content: fa-content($fa-var-building);
+        line-height: inherit !important;
     }
 }

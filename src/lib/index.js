@@ -6,8 +6,10 @@ import AppFooter from "./components/application/AppFooter/AppFooter";
 import AppHeader from "./components/application/AppHeader/AppHeader";
 import AppMain from "./components/application/AppMain/AppMain";
 import AppNavigation from "./components/application/AppNavigation/AppNavigation";
-import Colophon from "./components/partials/Colophon/Colophon";
 import BasicTemplate from "./components/templates/BasicTemplate/BasicTemplate";
+import Breadcrumbs from "./components/partials/Breadcrumb/Breadcrumbs";
+import Colophon from "./components/partials/Colophon/Colophon";
+import FullWidthTemplate from "./components/templates/FullWidthTemplate/FullWidthTemplate";
 import NarrowTemplate from "./components/templates/NarrowTemplate/NarrowTemplate";
 import NavigationBar from "./components/partials/NavigationBar/NavigationBar";
 import PageContent from "./components/page/PageContent/PageContent";
@@ -25,7 +27,9 @@ export {
     AppMain,
     AppNavigation,
     BasicTemplate,
+    Breadcrumbs,
     Colophon,
+    FullWidthTemplate,
     NarrowTemplate,
     NavigationBar,
     PageContent,

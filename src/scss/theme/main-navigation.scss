@@ -4,8 +4,6 @@
 }
 
 .main-navigation {
-    transition: all 0.3s ease-in-out;
-
     @extend .navbar-inverse, .px-sm-3, .bg-inverse-75, .navbar-toggleable-lg;
 
     .navbar-nav > .nav-item > a,

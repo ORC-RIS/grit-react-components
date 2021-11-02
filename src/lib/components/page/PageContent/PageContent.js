@@ -1,22 +1,45 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import narrowClass from "../../../narrowClass";
-import { AppContext } from "../../context/AppContext/AppContext";
 
 const PageContent = ({ children, config = {} }) => {
-    const { appContext } = useContext(AppContext);
-
     return (
         <div className="PageContent">
             <Container className="mt-4 mt-lg-5">
-                <Row className="justify-content-center">
-                    <Col xs={12} className={`mb-4 mb-lg-5 ${appContext.narrowContent && narrowClass}`}>
-                        {children}
+                <Row
+                    className={`${
+                        config.narrow
+                            ? "justify-content-center"
+                            : "justify-content-between"
+                    }`}
+                >
+                    <Col
+                        xs={12}
+                        className={`${config.narrow && narrowClass} ${
+                            config.sidebar && "col-lg-8"
+                        }`}
+                    >
+                        <PageContentWrapper>{children}</PageContentWrapper>
                     </Col>
+                    {config.sidebar && (
+                        <Col xs={12} lg={4}>
+                            <SidebarContentWrapper>
+                                {config.sidebar}
+                            </SidebarContentWrapper>
+                        </Col>
+                    )}
                 </Row>
             </Container>
         </div>
     );
+};
+
+const PageContentWrapper = ({ children }) => {
+    return <div className="PageContentWrapper mb-4 mb-lg-5">{children}</div>;
+};
+
+const SidebarContentWrapper = ({ children }) => {
+    return <div className="SidebarContentWrapper mb-4 mb-lg-5">{children}</div>;
 };
 
 export default PageContent;

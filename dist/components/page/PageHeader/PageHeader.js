@@ -1,55 +1,46 @@
 "use strict";
 
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
 
-var _react = _interopRequireWildcard(require("react"));
+var _react = _interopRequireDefault(require("react"));
 
 var _reactBootstrap = require("react-bootstrap");
 
 var _narrowClass = _interopRequireDefault(require("../../../narrowClass"));
 
-var _AppContext = require("../../context/AppContext/AppContext");
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
-
-function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
-
 var PageHeader = function PageHeader(_ref) {
+  var _config$title;
+
   var children = _ref.children,
       _ref$config = _ref.config,
       config = _ref$config === void 0 ? {} : _ref$config;
-
-  var _useContext = (0, _react.useContext)(_AppContext.AppContext),
-      appContext = _useContext.appContext;
-
-  return !config.hide && /*#__PURE__*/_react.default.createElement("div", {
+  return !config.hide && ((_config$title = config.title) !== null && _config$title !== void 0 ? _config$title : children) ? /*#__PURE__*/_react.default.createElement("div", {
     className: "PageHeader"
   }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "page-header ".concat(appContext.siteNavigationOverlapContent && "navigation-overlap-content", "\n                        ").concat(config.inline && "inline", "\n                        ")
+    className: "page-header ".concat(config.siteNavigationOverlapContent && "navigation-overlap-content", "\n                        ").concat(config.inline && "inline", "\n                        ")
   }, config.backgroundImage && /*#__PURE__*/_react.default.createElement(PageHeaderMedia, {
     backgroundImage: config.backgroundImage
   }), /*#__PURE__*/_react.default.createElement(PageHeaderContent, {
-    appContext: appContext,
     buttons: config.buttons,
+    inline: config.inline,
+    narrow: config.narrow,
     subtitle: config.subtitle,
     title: config.title,
     titlePrefix: config.titlePrefix,
     widgets: config.widgets,
     centered: config.centered
-  }), children));
+  }), children)) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null);
 };
 
 var PageHeaderMedia = function PageHeaderMedia(_ref2) {
   var backgroundImage = _ref2.backgroundImage;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "page-header-media"
+    className: "page-header-media bg-inverse"
   }, /*#__PURE__*/_react.default.createElement("img", {
     className: "page-header-image",
     src: backgroundImage,
@@ -58,20 +49,21 @@ var PageHeaderMedia = function PageHeaderMedia(_ref2) {
 };
 
 var PageHeaderContent = function PageHeaderContent(_ref3) {
-  var appContext = _ref3.appContext,
-      buttons = _ref3.buttons,
+  var buttons = _ref3.buttons,
       centered = _ref3.centered,
+      inline = _ref3.inline,
+      narrow = _ref3.narrow,
       subtitle = _ref3.subtitle,
       title = _ref3.title,
       titlePrefix = _ref3.titlePrefix,
       widgets = _ref3.widgets;
-  return /*#__PURE__*/_react.default.createElement("div", {
+  return (title !== null && title !== void 0 ? title : widgets) && /*#__PURE__*/_react.default.createElement("div", {
     className: "page-header-content"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     className: "justify-content-center"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
     xs: 12,
-    className: "".concat(appContext.narrowContent && _narrowClass.default)
+    className: "".concat(narrow && _narrowClass.default)
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
     className: "align-items-center"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
@@ -87,6 +79,7 @@ var PageHeaderContent = function PageHeaderContent(_ref3) {
     xs: 12
   }, /*#__PURE__*/_react.default.createElement(PageHeaderTitle, {
     centered: centered,
+    inline: inline,
     title: title,
     titlePrefix: titlePrefix
   })), subtitle && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
@@ -103,15 +96,16 @@ var PageHeaderContent = function PageHeaderContent(_ref3) {
 
 var PageHeaderTitle = function PageHeaderTitle(_ref4) {
   var centered = _ref4.centered,
+      inline = _ref4.inline,
       title = _ref4.title,
       titlePrefix = _ref4.titlePrefix;
-  return /*#__PURE__*/_react.default.createElement("h1", {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, titlePrefix && /*#__PURE__*/_react.default.createElement("span", {
+    className: "page-header-title-prefix ".concat(inline && "inline")
+  }, titlePrefix), /*#__PURE__*/_react.default.createElement("h1", {
     className: "page-header-title ".concat(centered && "text-center")
-  }, titlePrefix && /*#__PURE__*/_react.default.createElement("span", {
-    className: "title-prefix"
-  }, titlePrefix), /*#__PURE__*/_react.default.createElement("span", {
+  }, /*#__PURE__*/_react.default.createElement("span", {
     className: "title"
-  }, title));
+  }, title)));
 };
 
 var PageHeaderSubtitle = function PageHeaderSubtitle(_ref5) {

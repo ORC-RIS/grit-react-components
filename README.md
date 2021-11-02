@@ -4,11 +4,13 @@ This package contains React components and styles that will be common to applica
 
 ## Installation
 
-Install this package using npm: `npm install --save ORC-RIS/grit-react-components`.
+Install the latest version of this package using npm: `npm install ORC-RIS/grit-react-components`.
+
+You can also use tags to specify versions.
 
 ### Include CSS
 
-Import the css file from `/dist/css/` into your react project.
+Import the css file from `/dist/css/` into your React project.
 
 ### Using SASS files
 
@@ -16,15 +18,17 @@ If including the `style.scss` file from `/src` generates an error where fonts ca
 
 ## Development
 
-To develop this package locally, complete the following:
-
-1. Clone this repository into your project's parent directory.
-2. Enter the project directory and run `npm link ../grit-react-components`
-3. Enter the `grit-react-components` directory and run `npm install`, then `npm link ../PROJECT_DIR/react`.
+1. Clone this repository.
+2. Switch to `develop` branch.
+2. Enter the directory and run `npm run dev` to start storybook
 
 ### Available Scripts
 
 In the project directory, you can run:
+
+#### `npm run dev`
+
+Launches storybook and a watcher to compile the files as you develop.
 
 #### `npm run compile`
 
@@ -32,4 +36,4 @@ Builds to the `dist` folder.
 
 #### `npm run storybook`
 
-Launches storybook.
+Launches storybook by itself without compiling.

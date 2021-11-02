@@ -21,6 +21,23 @@ Default.args = {
         pageHeader: {
             title: "A Narrow Template",
         },
+        breadcrumbs: {
+            innerWrapperClass:"", 
+            wrapperClass: "",
+            links: [
+                {
+                    text: "Home",
+                    href: "#",
+                },
+                {
+                    text: "Team",
+                    href: "#",
+                },
+                {
+                    text: "Help Desk",
+                    href: "#",
+                },
+            ]
+        },
     },
-    setAppContext: () => {},
 };
