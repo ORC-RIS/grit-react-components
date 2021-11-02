@@ -10,8 +10,20 @@
             content: fa-content($fa-var-arrow-left);
             font-family: "Font Awesome 5 Free";
             font-weight: 900;
-            font-size: .875em;
+            font-size: 0.875em;
             padding-left: 0px;
         }
     }
+}
+
+.breadcrumb,
+.breadcrumb-item {
+    white-space: nowrap !important;
+}
+.breadcrumb .breadcrumb-item {
+    float: none !important;
+}
+.breadcrumb {
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
 }
