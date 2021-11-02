@@ -7,7 +7,11 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
+var _reactBootstrap = require("react-bootstrap");
+
 var _Breadcrumb = _interopRequireDefault(require("react-bootstrap/Breadcrumb"));
+
+var _narrowClass = _interopRequireDefault(require("../../../narrowClass"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30,16 +34,31 @@ var Breadcrumbs = function Breadcrumbs(_ref) {
     className: config.wrapperClass ? config.wrapperClass : "bg-faded py-2"
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "\n                        ".concat(config.innerWrapperClass ? config.innerWrapperClass : "py-1", "\n                        ").concat(config.container ? "container" : "px-3", "\n                        ")
-  }, /*#__PURE__*/_react.default.createElement(_Breadcrumb.default, {
+  }, config.container ? /*#__PURE__*/_react.default.createElement(_reactBootstrap.Row, {
+    className: "justify-content-center"
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
+    xs: 12,
+    className: config.narrow ? _narrowClass.default : ""
+  }, /*#__PURE__*/_react.default.createElement(CustomBreadcrumb, {
+    config: config
+  }))) : /*#__PURE__*/_react.default.createElement(CustomBreadcrumb, {
+    config: config
+  })))) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null);
+};
+
+var CustomBreadcrumb = function CustomBreadcrumb(_ref2) {
+  var config = _ref2.config;
+  return /*#__PURE__*/_react.default.createElement(_Breadcrumb.default, {
     listProps: config.listProps
   }, config.links && config.links.map(function (link, idx) {
     return /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
-      href: link.href,
+      href: link.href ? link.href : false,
       linkAs: config.linksAs,
       linkProps: link,
-      key: idx
+      key: idx,
+      active: link.active
     }, link.text);
-  }))))) : /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null);
+  }));
 };
 
 var _default = Breadcrumbs;

@@ -1,5 +1,7 @@
 import React from "react";
+import { Col, Row } from "react-bootstrap";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
+import narrowClass from "../../../narrowClass";
 
 const Breadcrumbs = ({ config = {} }) => {
     config.listProps = {
@@ -29,26 +31,44 @@ const Breadcrumbs = ({ config = {} }) => {
                         ${config.container ? "container" : "px-3"}
                         `}
                 >
-                    <Breadcrumb listProps={config.listProps}>
-                        {config.links &&
-                            config.links.map((link, idx) => {
-                                return (
-                                    <Breadcrumb.Item
-                                        href={link.href}
-                                        linkAs={config.linksAs}
-                                        linkProps={link}
-                                        key={idx}
-                                    >
-                                        {link.text}
-                                    </Breadcrumb.Item>
-                                );
-                            })}
-                    </Breadcrumb>
+                    {config.container ? (
+                        <Row className="justify-content-center">
+                            <Col
+                                xs={12}
+                                className={config.narrow ? narrowClass : ""}
+                            >
+                                <CustomBreadcrumb config={config} />
+                            </Col>
+                        </Row>
+                    ) : (
+                        <CustomBreadcrumb config={config} />
+                    )}
                 </div>
             </div>
         </div>
     ) : (
         <></>
+    );
+};
+
+const CustomBreadcrumb = ({ config }) => {
+    return (
+        <Breadcrumb listProps={config.listProps}>
+            {config.links &&
+                config.links.map((link, idx) => {
+                    return (
+                        <Breadcrumb.Item
+                            href={link.href ? link.href : false}
+                            linkAs={config.linksAs}
+                            linkProps={link}
+                            key={idx}
+                            active={link.active}
+                        >
+                            {link.text}
+                        </Breadcrumb.Item>
+                    );
+                })}
+        </Breadcrumb>
     );
 };
 
