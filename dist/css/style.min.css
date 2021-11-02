@@ -9423,11 +9423,11 @@ readers do not read off random characters that represent icons */
 .post-company:before { position: absolute; left: 0; display: inline-block; text-align: center; width: 1.25rem; content: "\f1ad"; line-height: inherit !important; }
 
 @media only screen and (max-width: 576px) { .breadcrumb-item:not(:nth-last-child(2)) { display: none !important; }
-  .breadcrumb-item:nth-last-child(2):before { content: "\f060"; font-family: "Font Awesome 5 Free"; font-weight: 900; font-size: 0.875em; padding-left: 0px; } }
+  .breadcrumb-item:nth-last-child(2):before { content: "\f060"; font-family: "Font Awesome 5 Free"; font-weight: 900; font-size: 0.875em; padding-left: 0px; padding-right: 0.5rem; } }
 
 .breadcrumb, .breadcrumb-item { white-space: nowrap !important; }
 
-.breadcrumb .breadcrumb-item { float: none !important; }
+.breadcrumb-item { float: none !important; display: inline; }
 
 .breadcrumb { text-overflow: ellipsis !important; overflow: hidden !important; }
 

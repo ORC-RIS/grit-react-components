@@ -12,6 +12,7 @@
             font-weight: 900;
             font-size: 0.875em;
             padding-left: 0px;
+            padding-right: 0.5rem;
         }
     }
 }
@@ -20,8 +21,9 @@
 .breadcrumb-item {
     white-space: nowrap !important;
 }
-.breadcrumb .breadcrumb-item {
+.breadcrumb-item {
     float: none !important;
+    display: inline;
 }
 .breadcrumb {
     text-overflow: ellipsis !important;
