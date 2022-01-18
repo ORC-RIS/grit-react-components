@@ -53,7 +53,7 @@ var CustomBreadcrumb = function CustomBreadcrumb(_ref2) {
   }, config.links && config.links.map(function (link, idx) {
     return /*#__PURE__*/_react.default.createElement(_Breadcrumb.default.Item, {
       href: link.href ? link.href : false,
-      to: link.to ? link.to : false,
+      to: link.to ? link.to : undefined,
       linkAs: config.linksAs,
       linkProps: link,
       key: idx,

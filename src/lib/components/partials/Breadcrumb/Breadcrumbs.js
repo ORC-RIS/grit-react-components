@@ -59,7 +59,7 @@ const CustomBreadcrumb = ({ config }) => {
                     return (
                         <Breadcrumb.Item
                             href={link.href ? link.href : false}
-                            to={link.to ? link.to : false}
+                            to={link.to ? link.to : undefined}
                             linkAs={config.linksAs}
                             linkProps={link}
                             key={idx}
