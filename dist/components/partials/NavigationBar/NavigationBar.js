@@ -22,7 +22,11 @@ var NavigationBar = function NavigationBar(_ref) {
     className: "main-navigation-wrapper"
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar, {
     collapseOnSelect: true,
-    className: "main-navigation ".concat(config.overlapContent ? "overlap-content" : "")
+    className: "main-navigation ".concat(config.overlapContent ? "overlap-content" : ""),
+    onSelect: config.onSelect,
+    fixed: config.fixed,
+    expand: config.expand,
+    expanded: config.expanded
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(NavbarBrand, config.brand), config.links && /*#__PURE__*/_react.default.createElement(NavbarToggle, null), config.links && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
     id: "navbarScroll"
   }, /*#__PURE__*/_react.default.createElement(MainNav, {

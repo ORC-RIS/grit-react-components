@@ -6,10 +6,14 @@ const NavigationBar = ({ config = {} }) => {
         <div className="NavigationBar">
             <div className="main-navigation-wrapper">
                 <Navbar
-                    collapseOnSelect
+                    collapseOnSelect={true}
                     className={`main-navigation ${
                         config.overlapContent ? "overlap-content" : ""
                     }`}
+                    onSelect={config.onSelect}
+                    fixed={config.fixed}
+                    expand={config.expand}
+                    expanded={config.expanded}
                 >
                     <Container>
                         <NavbarBrand {...config.brand} />
