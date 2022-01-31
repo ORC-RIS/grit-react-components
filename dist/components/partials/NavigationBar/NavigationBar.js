@@ -40,7 +40,9 @@ var MainNav = function MainNav(_ref2) {
   var _ref2$links = _ref2.links,
       links = _ref2$links === void 0 ? [] : _ref2$links,
       linksAs = _ref2.linksAs,
-      linksClick = _ref2.linksClick;
+      _ref2$linksClick = _ref2.linksClick,
+      linksClick = _ref2$linksClick === void 0 ? function () {} : _ref2$linksClick;
+  console.log(linksClick);
   return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, {
     className: "main-nav",
     as: "ul",
@@ -52,7 +54,9 @@ var MainNav = function MainNav(_ref2) {
     }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, _extends({
       eventKey: idx,
       as: linksAs,
-      onClick: linksClick
+      onClick: function onClick() {
+        typeof linksClick === "function" && linksClick();
+      }
     }, link), link.text));
   }));
 };

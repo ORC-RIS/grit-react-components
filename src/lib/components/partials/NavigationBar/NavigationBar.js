@@ -34,7 +34,8 @@ const NavigationBar = ({ config = {} }) => {
     );
 };
 
-const MainNav = ({ links = [], linksAs, linksClick }) => {
+const MainNav = ({ links = [], linksAs, linksClick = () => {} }) => {
+    console.log(linksClick);
     return (
         <Nav className="main-nav" as="ul" activeKey="">
             {links &&
@@ -44,7 +45,10 @@ const MainNav = ({ links = [], linksAs, linksClick }) => {
                             <Nav.Link
                                 eventKey={idx}
                                 as={linksAs}
-                                onClick={linksClick}
+                                onClick={() => {
+                                    typeof linksClick === "function" &&
+                                        linksClick();
+                                }}
                                 {...link}
                             >
                                 {link.text}

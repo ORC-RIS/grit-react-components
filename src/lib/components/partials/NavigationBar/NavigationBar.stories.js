@@ -42,6 +42,9 @@ Default.args = {
                 href: "#",
             },
         ],
+        linksClick: function () {
+            console.log("test");
+        }
     },
 };
 
