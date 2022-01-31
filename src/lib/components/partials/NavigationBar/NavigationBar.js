@@ -64,9 +64,9 @@ const NavbarBrand = (props) => {
     return <Navbar.Brand {...props}>{props.content}</Navbar.Brand>;
 };
 
-const NavbarToggle = () => {
+const NavbarToggle = (props) => {
     return (
-        <Navbar.Toggle>
+        <Navbar.Toggle {...props}>
             <span className="navbar-toggler-text">Navigation</span>
             <span className="navbar-toggler-icon ml-2"></span>
         </Navbar.Toggle>

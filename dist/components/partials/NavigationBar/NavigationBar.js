@@ -65,8 +65,8 @@ var NavbarBrand = function NavbarBrand(props) {
   return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Brand, props, props.content);
 };
 
-var NavbarToggle = function NavbarToggle() {
-  return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Toggle, null, /*#__PURE__*/_react.default.createElement("span", {
+var NavbarToggle = function NavbarToggle(props) {
+  return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Toggle, props, /*#__PURE__*/_react.default.createElement("span", {
     className: "navbar-toggler-text"
   }, "Navigation"), /*#__PURE__*/_react.default.createElement("span", {
     className: "navbar-toggler-icon ml-2"
