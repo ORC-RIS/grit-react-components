@@ -42,7 +42,6 @@ var MainNav = function MainNav(_ref2) {
       linksAs = _ref2.linksAs,
       _ref2$linksClick = _ref2.linksClick,
       linksClick = _ref2$linksClick === void 0 ? function () {} : _ref2$linksClick;
-  console.log(linksClick);
   return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, {
     className: "main-nav",
     as: "ul",

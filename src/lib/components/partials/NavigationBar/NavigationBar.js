@@ -35,7 +35,6 @@ const NavigationBar = ({ config = {} }) => {
 };
 
 const MainNav = ({ links = [], linksAs, linksClick = () => {} }) => {
-    console.log(linksClick);
     return (
         <Nav className="main-nav" as="ul" activeKey="">
             {links &&
