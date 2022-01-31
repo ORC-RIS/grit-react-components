@@ -31,14 +31,16 @@ var NavigationBar = function NavigationBar(_ref) {
     id: "navbarScroll"
   }, /*#__PURE__*/_react.default.createElement(MainNav, {
     links: config.links,
-    linksAs: config.linksAs
+    linksAs: config.linksAs,
+    linksClick: config.linksClick
   }))))));
 };
 
 var MainNav = function MainNav(_ref2) {
   var _ref2$links = _ref2.links,
       links = _ref2$links === void 0 ? [] : _ref2$links,
-      linksAs = _ref2.linksAs;
+      linksAs = _ref2.linksAs,
+      linksClick = _ref2.linksClick;
   return /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav, {
     className: "main-nav",
     as: "ul",
@@ -49,7 +51,8 @@ var MainNav = function MainNav(_ref2) {
       key: idx
     }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, _extends({
       eventKey: idx,
-      as: linksAs
+      as: linksAs,
+      onClick: linksClick
     }, link), link.text));
   }));
 };

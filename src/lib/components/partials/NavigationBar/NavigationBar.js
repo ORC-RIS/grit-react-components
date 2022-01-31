@@ -23,6 +23,7 @@ const NavigationBar = ({ config = {} }) => {
                                 <MainNav
                                     links={config.links}
                                     linksAs={config.linksAs}
+                                    linksClick={config.linksClick}
                                 />
                             </Navbar.Collapse>
                         )}
@@ -33,14 +34,19 @@ const NavigationBar = ({ config = {} }) => {
     );
 };
 
-const MainNav = ({ links = [], linksAs }) => {
+const MainNav = ({ links = [], linksAs, linksClick }) => {
     return (
         <Nav className="main-nav" as="ul" activeKey="">
             {links &&
                 links.map((link, idx) => {
                     return (
                         <Nav.Item as="li" key={idx}>
-                            <Nav.Link eventKey={idx} as={linksAs} {...link}>
+                            <Nav.Link
+                                eventKey={idx}
+                                as={linksAs}
+                                onClick={linksClick}
+                                {...link}
+                            >
                                 {link.text}
                             </Nav.Link>
                         </Nav.Item>
