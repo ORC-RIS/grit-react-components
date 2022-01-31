@@ -27,7 +27,7 @@ var NavigationBar = function NavigationBar(_ref) {
     fixed: config.fixed,
     expand: config.expand,
     expanded: config.expanded
-  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(NavbarBrand, config.brand), config.links && /*#__PURE__*/_react.default.createElement(NavbarToggle, null), config.links && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
+  }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Container, null, /*#__PURE__*/_react.default.createElement(NavbarBrand, config.brand), config.links && /*#__PURE__*/_react.default.createElement(NavbarToggle, config.toggle), config.links && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Navbar.Collapse, {
     id: "navbarScroll"
   }, /*#__PURE__*/_react.default.createElement(MainNav, {
     links: config.links,

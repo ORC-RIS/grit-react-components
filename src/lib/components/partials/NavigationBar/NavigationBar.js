@@ -17,7 +17,7 @@ const NavigationBar = ({ config = {} }) => {
                 >
                     <Container>
                         <NavbarBrand {...config.brand} />
-                        {config.links && <NavbarToggle />}
+                        {config.links && <NavbarToggle {...config.toggle} />}
                         {config.links && (
                             <Navbar.Collapse id="navbarScroll">
                                 <MainNav
