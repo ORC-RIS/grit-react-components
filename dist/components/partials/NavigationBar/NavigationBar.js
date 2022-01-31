@@ -48,6 +48,7 @@ var MainNav = function MainNav(_ref2) {
       as: "li",
       key: idx
     }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Nav.Link, _extends({
+      eventKey: idx,
       as: linksAs
     }, link), link.text));
   }));

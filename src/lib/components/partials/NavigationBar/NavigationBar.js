@@ -40,7 +40,7 @@ const MainNav = ({ links = [], linksAs }) => {
                 links.map((link, idx) => {
                     return (
                         <Nav.Item as="li" key={idx}>
-                            <Nav.Link as={linksAs} {...link}>
+                            <Nav.Link eventKey={idx} as={linksAs} {...link}>
                                 {link.text}
                             </Nav.Link>
                         </Nav.Item>
