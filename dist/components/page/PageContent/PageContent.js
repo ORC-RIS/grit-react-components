@@ -25,10 +25,11 @@ var PageContent = function PageContent(_ref) {
     className: "".concat(config.narrow ? "justify-content-center" : "justify-content-between")
   }, /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
     xs: 12,
-    className: "".concat(config.narrow && _narrowClass.default, " ").concat(config.sidebar && "col-lg-8")
+    className: "".concat(config.narrow && _narrowClass.default, " ").concat(config.sidebar && "col-lg-8 pr-lg-5")
   }, /*#__PURE__*/_react.default.createElement(PageContentWrapper, null, children)), config.sidebar && /*#__PURE__*/_react.default.createElement(_reactBootstrap.Col, {
     xs: 12,
-    lg: 4
+    lg: 4,
+    className: "pl-lg-5"
   }, /*#__PURE__*/_react.default.createElement(SidebarContentWrapper, null, config.sidebar)))));
 };
 

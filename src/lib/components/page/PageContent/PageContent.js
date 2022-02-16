@@ -16,13 +16,13 @@ const PageContent = ({ children, config = {} }) => {
                     <Col
                         xs={12}
                         className={`${config.narrow && narrowClass} ${
-                            config.sidebar && "col-lg-8"
+                            config.sidebar && "col-lg-8 pr-lg-5"
                         }`}
                     >
                         <PageContentWrapper>{children}</PageContentWrapper>
                     </Col>
                     {config.sidebar && (
-                        <Col xs={12} lg={4}>
+                        <Col xs={12} lg={4} className="pl-lg-5">
                             <SidebarContentWrapper>
                                 {config.sidebar}
                             </SidebarContentWrapper>
