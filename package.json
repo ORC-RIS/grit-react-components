@@ -59,6 +59,10 @@
                     "import/no-anonymous-default-export": "off"
                 }
             }
+        ],
+        "indent": [
+            2,
+            2
         ]
     },
     "browserslist": {
